@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.home{
+	margin: auto;
+}
+
+.navtop,
+.main{
+	width: 100px;
+	min-width: 1000px;
+	margin: auto;
+}
+
+.navtop{
+	height: 89px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 0px 0px 
+		rgba(155, 155, 155, 0.18);
+}
+
+.logo{
+	height: 89px;
+	display: inline-block;
+	font-family: HiraginoSansGB-W6;
+	font-size: 26px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 89px;
+	letter-spacing: 0px;
+	color: #333333;
+	vertical-align: middle;
+}
+
+.navbar{
+	display: inline-block;
+	height: 89px;
+	margin-left: 175px;
+	vertical-align: middle;
+}
+
+.list li{
+	height: 89px;
+	float: left;
+	list-style: none;
+	width: 80px;
+    text-align: center;
+    line-height: 89px;
+    font-family: HiraginoSansGB-W3;
+}
+.list li:hover{
+	background-color: #00a7e1;
+	color: #ffffff;
+}
+
+.chosed{
+	background-color: #00a7e1;
+	color: #ffffff;
+}
+
+.top{
+	min-height: 175px;
+	background-color: #fafafa;
+	border-bottom: 1px solid #f4f4f4;
+
+}
+
+.survey{
+	width: 1000px;
+	margin: auto;
+}
+
+.h1{
+	height: 85.2px;
+	line-height: 85.2px;
+}
+
+.main_item_left,
+.main_item_mid,
+.main_item_right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.main_item{
+	border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+.main_item_left{
+	width: 382px;
+}
+
+.main_item_mid{
+	width: 381px;
+	height: 270px;
+	background-color: #f4f4f4;
+	margin-right: 10px;
+	margin-left: 36px;
+}
+
+.main_item_right{
+	width: 185px;
+	height: 270px;
+	/*margin-left: -5px;*/
+}
+
+.main_item_right_item{
+	width: 185px;
+	height: 130px;
+	background-color: #f4f4f4;
+	margin-bottom: 10px;
+}
+
+.content{
+	width: 382px;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #666666;
+	margin-top: 33px;
+	line-height: 25px;
+}
+
+.spot{
+	color: #00a7e1;
+}
+
+.title_style{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #00a7e1;
+	color: #fff;
+	text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: 16px;
+}
+a{
+	color: #000;
+}
+a:visited{
+	color: #000;
+}
+
+.bottom{
+	height: 586px;
+	background: #333;
+	color: #fff;
+}
+
+.font p{
+	width: 994px;
+	text-align: center;
+	margin: auto;
+	margin-top: 25px;
+
+}
+
+.font{
+	margin-top: 20px;
+    border: 1px solid #333;
+}

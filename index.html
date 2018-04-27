@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="shortcut icon" type="image/x-icon" href="static/32.ico" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="src/styles/yunnan.css">
+</head>
+<body>
+	<div class="home">
+		<div class="navtop">
+			<div class="logo">
+				轻松旅游网
+			</div>
+			<div class="navbar">
+				<ul class="list">
+					<li class="chosed">
+						首页
+					</li>
+					<a href="src/pages/travel_notes/index.html" target="_blank">
+						<li>
+							攻略
+						</li>
+					</a>
+					
+					<a href="src/pages/scenic_spot/index.html" target="_blank">
+						<li>
+							景点
+						</li>
+					</a>
+					<li>
+						线路
+					</li>
+					<li>
+						游记
+					</li>
+					<li>
+						美食
+					</li>
+					<li>
+						价格
+					</li>
+					<li>
+						旅行社
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="top">
+			<div class="survey">
+				<p class="h1">景点概况</p>
+				<p>彩云之南，这里有。。。。。。。。。。。。。。</p>
+			</div>
+		</div>
+
+		<div class="main">
+			<p class="h1">必游景点TOP5</p>
+			<div class="main_list">
+				<!-- <div class="main_item">
+					<div class="main_item_left">
+						<p class="title">
+							<span class="title_style">1</span>
+							<span>泸沽湖</span>
+						</p>
+						<div class="content">
+							<p>
+								泸沽湖古称鲁窟海子，被称为“神奇的东方女儿国”。 湖边的居民主要为摩梭人，也有部分纳西族人，摩梭人至今仍然保留着母系氏族婚姻制度。
+							</p>
+							<p>
+								<span>这里还包括景点：</span>
+								<span class="spot">博凹岛(王妃岛) 情人滩 大落水村 里务比岛 格姆女神山 泸沽湖观景台 草海 里格岛 赵家湾(女神湾) 泸沽湖镇(左所镇) 小洛水 走婚桥 里务比寺 尼赛村(里色村) 泸源崖</span>
+							</p>
+						</div>
+					</div>
+					<div class="main_item_mid">
+						
+					</div>
+					<div class="main_item_right">
+						<div class="main_item_right_item">
+							
+						</div>
+						<div class="main_item_right_item">
+							
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+
+		<div class="bottom">
+			
+		</div>
+	</div>
+
+<script type="text/javascript" src="modules/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+	(function(){
+		var home = {
+			init: function(){
+				console.log(11);
+				this.getData();
+			},
+
+			// 请求数据
+			getData: function(){
+				$.ajax({
+					url: 'src/data/home.json',
+					type: 'GET',
+					dataType: 'json',
+					data:{},
+					success: function(res){
+						console.log(res)
+						var info = '';
+						for(var i = 0, len = res.list.length; i<len; i++){
+							info += '<div class="main_item"><div class="main_item_left"><p class="title"><span class="title_style">1</span> <span>'+res.list[i].name+'</span></p><div class="content"><p>'+res.list[i].introduce+'</p><p><span>这里还包括景点：</span><span class="spot">'+res.list[i].spot+'</span></p></div></div><div class="main_item_mid">	</div><div class="main_item_right"><div class="main_item_right_item">	</div><div class="main_item_right_item">	</div></div></div>'
+						}
+						$('.main_list').append(info)
+					},
+					error: function(){
+						console.log('error')
+					}
+				})
+			}
+		}
+		home.init()
+	})()
+</script>
+</body>
+</html>

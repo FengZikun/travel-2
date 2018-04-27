@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>攻略</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="../../styles/travel_notes.css">
+</head>
+<body>
+	<div id="travel_notes" class="travel_notes" style="margin: auto;">
+		<div class="navtop">
+			<div class="logo">
+				轻松旅游网
+			</div>
+			<div class="navbar">
+				<ul class="list">
+					<a href="../../../index.html" target="_blank">
+						<li>
+							首页
+						</li>
+					</a>
+					
+					<li class="chosed">
+						攻略
+					</li>
+					<a href="../scenic_spot/index.html" target="_blank">
+						<li>
+							景点
+						</li>
+					</a>
+					<li>
+						线路
+					</li>
+					<li>
+						游记
+					</li>
+					<li>
+						美食
+					</li>
+					<li>
+						价格
+					</li>
+					<li>
+						旅行社
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="top">
+			<div class="survey">
+				<router-link to="/all">全部</router-link>
+				<router-link to="/gentuan">跟团游</router-link>
+				<router-link to="/ziyou">自由行</router-link>
+			</div>
+		</div>
+
+		<div class="main">
+			<router-view></router-view>
+			<div class="main_item">
+				<img class="notes_item" src="">
+			</div>
+		</div>
+
+		<div class="bottom">
+			<div class="font">
+				<p>
+					昆明旅游 曲靖旅游 玉溪旅游 保山旅游 昭通旅游 丽江旅游 普洱旅游 临沧旅游 安宁旅游 宣威旅游 腾冲旅游 楚雄旅游 个旧旅游
+					开远旅游 蒙自旅游 弥勒旅游 文山旅游 景洪旅游 大理旅游 瑞丽旅游 芒市旅游 香格里拉旅游                   （地区旅游）
+				</p>
+				<p>
+					北 京到云南旅游  上海到云南旅游 天津到云南旅游 重庆到云南旅游 哈尔滨到云南旅游  长春到云南旅游 沈阳到云南旅游 呼和浩特到云南旅游
+					石家庄到云南旅游 乌鲁木齐到云南旅游 兰州到云南旅游  西宁到云南旅游 西安到云南旅游 银川到云南旅游 郑州到云南旅游 济南到云南旅游
+					太原到云南旅游  合肥到云南旅游 长沙到云南旅游 武汉到云南旅游 南京到云南旅游 成都到云南旅游 贵阳到云南旅游 昆明到云南旅游 南宁到云南旅游
+					拉萨到云南旅游 杭州到云南旅游 南昌到云南旅游 广州到云南旅游 福州到云南旅游  海口到云南旅游  香港到云南旅游  澳门到云南旅游 深圳到云南旅游  无锡到云南旅游 宁波到云南旅游 青岛到云南旅游 厦门到云南旅游
+				</p>
+
+				<p>
+					云南1日游 云南2日游 云南3日游 云南4日游  .云南5日游 云南6日游 云南7日游 云南8日游 云南9日游 云南10日游 云南11日游 云南12日游 
+					云南13日游 云南14日游 云南15日游 云南16日游 云南17日游                       （时间旅游）
+				</p>
+				<p>
+					1月云南旅游 2月云南旅游 3月云南旅游 4月云南旅游 5月云南旅游 6月云南旅游 7月云南旅游 8月云南旅游 9月云南旅游
+					10月云南旅游 11月云南旅游 12月云南旅游 
+				</p>
+				<p>
+					春天到云南旅游  夏天到云南旅游  秋天到云南旅游   冬天到云南旅游
+				</p>
+				<p>
+					云南自驾游  云南自由行  云南自助游  云南徒步游  云南背包游    云南跟团游
+				</p>
+				<p>
+					云南元旦节旅游 云南春节旅游 云南清明旅游 云南劳动节旅游  云南端午节旅游 云南中秋旅游 云南国庆旅游
+				</p>
+				<p>
+					云南泼水节旅游  云南暑期旅游 
+				</p>
+
+
+
+
+
+			</div>
+			
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../../../modules/vue.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+	<script type="text/javascript">
+		(function(){
+			var ziyou = {template: '<div>自由行</div>'}
+
+			// 跟团游
+			var gentuan = Vue.component('gentuan', {
+				template: '<div>{{ message }}</div>',
+				data: function(){
+					return{
+						message: '跟团游'
+					}
+				}
+			});
+
+			var routes = [
+			{path: '/gentuan', component: gentuan},
+			{path: '/ziyou', component: ziyou},
+			]
+			var router = new VueRouter({
+				routes
+			})
+			var app = new Vue({
+				el: '#travel_notes',
+				data: {
+					message: 'Hello Vue!'
+				},
+				router
+
+			})
+		})()
+		
+	</script>
+</body>
+</html>
