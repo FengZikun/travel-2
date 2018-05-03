@@ -11,8 +11,7 @@ a{
 	margin: auto;
 }
 
-.navtop,
-.main{
+.navtop{
 	width: 100px;
 	min-width: 1000px;
 	margin: auto;
@@ -92,7 +91,17 @@ a{
 }
 
 .main_item:hover{
-	background: #f5fbfe;
+	background: #fafafa;
+}
+
+.main_item_box{
+	width: 1000px;
+	height: 486px;
+	background: #fff;
+	border-top: solid 1px #eaeaea;
+	border-bottom: solid 1px #eaeaea;
+	margin: auto;
+	padding: 30px;
 }
 
 .main_item_left{
@@ -174,22 +183,23 @@ a:visited{
 .notes_item{
 	width: 250px;
 	height: 185px;
-	margin-right: 10px;
+
 }
 
 .title{
-	height: 18px;
-	line-height: 18px;
-	font-size: 18px;
-	color: #00a7e1;
+	height: 24px;
+	line-height: 24px;
+	font-size: 24px;
+	color: #333;
+	font-family: HiraginoSansGB-W6;
 }
 
 .jianjie{
-	width: 600px;
+	width: 745px;
 	height: 34px;
 	line-height: 17px;
 	font-size: 14px;
-	margin: 55px 0;
+	margin: 45px 0 35px 0;
 }
 
 .date{
@@ -200,18 +210,19 @@ a:visited{
 .ico1,
 .ico2{
 	display: inline-block;
-	width: 12px;
-	height: 12px;
+	width: 24px;
+	height: 24px;
 	background-size: contain;
 	vertical-align: middle;
+	background-repeat: no-repeat;
 }
 
 .ico1{
-	background-image: url(../../../static/ico/icon_rili.png);
+	background-image: url(../../../static/ico/icon_jijie.png);
 }
 
 .ico2{
-	background-image: url(../../../static/ico/icon_fenlei.png);
+	background-image: url(../../../static/ico/icon_rili2.png);
 }
 
 .meitu,
@@ -224,18 +235,32 @@ a:visited{
 	position: absolute;
 }
 
-.meitu{
-	background-image: url(../../../static/ico/icon_meitu.png)
+.main_item_box_top{
+	border-bottom: solid 1px #eaeaea;
+	padding-bottom: 25px; 
+	display: inline-block;
+	vertical-align: top;
 }
 
-.jinghua{
-	background-image: url(../../../static/ico/icon_jinghua.png)
+.main_item_box_content{
+	display: inline-block;
+	vertical-align: top;
 }
 
-.shiyong{
-	background-image: url(../../../static/ico/icon_shiyong.png)
+.main_item_box_content span{
+	float: right;
+	font-family: HiraginoSansGB-W3;
+	font-size: 12px;
+	margin-right: 10px;
 }
 
-.diancang{
-	background-image: url(../../../static/ico/icon_diancang.png)
+.detail{
+	padding: 10px 25px;
+	width: 134px;
+	height: 35px;
+	background-color: #00a7e1;
+	border-radius: 4px;
+	color: #fff;
+	outline: none;
+	border: 0;
 }

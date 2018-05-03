@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>景点</title>
+	<title>美食</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="../../styles/scenic_spot.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/food.css">
 </head>
 <body>
-	<div class="scenic_spot">
+	<div id="food" class="food" style="margin: auto;">
 		<div class="navtop">
 			<div class="logo">
 				轻松旅游网
@@ -25,9 +25,11 @@
 						</li>
 					</a>
 					
-					<li class="chosed">
-						景点
-					</li>
+					<a href="../scenic_spot/index.html" target="_blank">
+						<li>
+							景点
+						</li>
+					</a>
 					<a href="../line/index.html" target="_blank">
 						<li>
 							线路
@@ -36,7 +38,7 @@
 					<li>
 						游记
 					</li>
-					<li>
+					<li class="chosed">
 						美食
 					</li>
 					<li>
@@ -51,25 +53,12 @@
 
 		<div class="top">
 			<div class="survey">
-				<p class="h1">景点概况</p>
-				<p>彩云之南，这里有。。。。。。。。。。。。。。</p>
+				<p class="h1">云南美食</p>
 			</div>
 		</div>
 
 		<div class="main">
-			<p class="h1">必游景点TOP5</p>
-			<div class="main_list">
-				
-			</div>
-
-			<div class="">
-				<p class="h1">云南全部景点</p>
-				<div class="all">
-					<ul class="all_list">
-						
-					</ul>
-				</div>
-			</div>
+			
 		</div>
 
 		<div class="bottom">
@@ -118,63 +107,30 @@
 	<script type="text/javascript" src="../../../modules/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		(function(){
-			var home = {
-				init: function(){
-					this.getData();
-					this.getSpot();
-				},
-
-			// 请求列表数据
-			getData: function(){
-				$.ajax({
-					url: '../../data/scenic_spot/scenic_spot.json',
-					type: 'GET',
-					dataType: 'json',
-					data:{},
-					success: function(res){
-						var info = '';
-						for(var i = 0, len = res.list.length; i<len; i++){
-							info += '<div class="main_item"><div class="main_item_left"><p class="title"><span class="title_style">'
-							+(i+1)+'</span> <span>'
-							+res.list[i].name+'</span></p><div class="content"><p>'
-							+res.list[i].introduce+'</p><p><span>这里还包括景点：</span><span class="spot">'
-							+res.list[i].spot+'</span></p></div></div><div class="main_item_mid"><img src="'
-							+res.list[i].img1+'"></div><div class="main_item_right"><div class="main_item_right_item"><img src="'
-							+res.list[i].img2+'"></div><div class="main_item_right_item"><img src="'
-							+res.list[i].img3+'"></div></div></div>'
+			var food = {
+				getData: function(){
+					$.ajax({
+						url: '../../data/food/food.json',
+						type: 'GET',
+						dataType: 'json',
+						data:{},
+						success: function(res){
+							var info = '';
+							for(var i = 0, len = res.list.length; i<len; i++){
+								info += '<div class="main_item"><img class="main_item_img" src="'+res.list[i].img+'"><p class="main_item_p">'+res.list[i].title+'</p><p alt="'+res.list[i].content+'" class="main_item_content">'+res.list[i].content+'</p></div>'
+							}
+							$('.main').append(info)
+						},
+						error: function(){
+							console.log('error')
 						}
-						$('.main_list').append(info)
-					},
-					error: function(){
-						console.log('error')
-					}
-				})
-			},
-
-			// 请求全部景点
-			getSpot: function(){
-				$.ajax({
-					url: '../../data/scenic_spot/spot_list.json',
-					type: 'GET',
-					dataType: 'json',
-					data: {},
-					success: function(res){
-						var info = '';
-						for(var i = 0, len = res.list.length; i<len; i++){
-							info += '<li class="all_spot"><img class="spot_img" src="'
-							+res.list[i].img+'"><div class="spot_item">'
-							+res.list[i].name+'</div></li>'
-						}
-						$('.all_list').append(info)
-					},
-					error: function(){
-						console.log('error')
-					}
-				})
+					})
+				}
 			}
-		}
-		home.init()
-	})()
-</script>
+
+			food.getData()
+		})()
+		
+	</script>
 </body>
 </html>
