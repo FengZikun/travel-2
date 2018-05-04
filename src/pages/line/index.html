@@ -33,15 +33,21 @@
 					<li class="chosed">
 						线路
 					</li>
-					<li>
-						游记
-					</li>
-					<li>
-						美食
-					</li>
-					<li>
-						价格
-					</li>
+					<a href="../travel_notes/index.html" target="_blank">
+						<li>
+							游记
+						</li>
+					</a>
+					<a href="../food/index.html" target="_blank">
+						<li>
+							美食
+						</li>
+					</a>
+					<a href="../price/index.html" target="_blank">
+						<li>
+							价格
+						</li>
+					</a>
 					<li>
 						旅行社
 					</li>
@@ -51,15 +57,15 @@
 
 		<div class="top">
 			<div class="survey">
-				<router-link to="/all">全部线路</router-link>
-				<router-link to="/quyu">区域玩法线路</router-link>
-				<router-link to="/chengshi">城市玩法线路</router-link>
+				<router-link to="/all" class="link">全部线路</router-link>
+				<router-link to="/quyu" class="link">区域玩法线路</router-link>
+				<router-link to="/chengshi" class="link">城市玩法线路</router-link>
 			</div>
 		</div>
 
 		<div class="main">
 			<router-view></router-view>
-			<div class="main_item">
+			<!-- <div class="main_item">
 				<div class="main_item_box">
 					<div class="main_item_box_top">
 						<div class="main_item_box_content">
@@ -82,7 +88,7 @@
 						
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 		<div class="bottom">
@@ -140,7 +146,7 @@
 					data: function(){
 						return{
 							message: name,
-							list:[1, 2, 3]
+							list:[]
 						}
 					},
 					template: '<div class="tem"><div v-for="item in list" class="main_item"><div class="main_item_box"><div class="main_item_box_top"><div class="main_item_box_content"><p class="title">{{item.title}}<span style="vertical-align: middle;">最佳季节：{{item.season}}</span><span class="ico2"></span><span style="vertical-align: middle;">游玩时间：{{item.time}}</span><span class="ico1"></span></p><p class="jianjie">{{item.jianjie}}</p><input class="detail" type="button" name="" value="查看路线详情"></div><img class="notes_item" :src="item.map"></div><div class="main_item_right"></div></div></div></div>',
@@ -154,9 +160,13 @@
 								dataType: 'json',
 								data:{},
 								success:function(res){
-									console.log(self.list)
-									self.list = res[listname];
-									console.log(self.list)
+									if(listname !== "all"){
+										self.list = res[listname];
+									} else {
+										for(var item in res){
+											self.list = self.list.concat(res[item])
+										}
+									}
 								},
 								error: function(){
 									console.log('error')
@@ -179,6 +189,7 @@
 			var chengshi = new Component('自由行', 'listChengshi')
 
 			var routes = [
+			{path: '/', component: all},
 			{path: '/all', component: all},
 			{path: '/quyu', component: quyu},
 			{path: '/chengshi', component: chengshi}

@@ -264,3 +264,14 @@ a:visited{
 	outline: none;
 	border: 0;
 }
+
+.router-link-active{
+	color: #00a7e1;
+	border-bottom: 2px solid #00a7e1;
+}
+
+.link{
+	display: inline-block;
+	margin-right: 10px;
+	padding-bottom: 5px;
+}

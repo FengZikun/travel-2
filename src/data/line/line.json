@@ -14,5 +14,21 @@
 			"jianjie": "丽江->香格里拉",
 			"map": "../../../static/img/spot_list/hahah.jpg"
 		}
+	],
+	"listChengshi": [
+		{
+			"title": "大理-丽江-泸沽湖9日玩法",
+			"season": "3-5月",
+			"time": "7-9天",
+			"jianjie": "大理->丽江->泸沽湖",
+			"map": "../../../static/img/spot_list/hahah.jpg"
+		},
+		{
+			"title": "丽江-香格里拉3日玩法",
+			"season": "3-4月",
+			"time": "5-6天",
+			"jianjie": "丽江->香格里拉",
+			"map": "../../../static/img/spot_list/hahah.jpg"
+		}
 	]
 }

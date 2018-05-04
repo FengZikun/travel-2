@@ -1,0 +1,30 @@
+{
+	"listLijiang":[
+		{
+			"img": "../../../static/img/price/price1.jpg",
+			"title": "大理-丽江-泸沽湖9日玩法",
+			"jianjie": "大理->丽江->泸沽湖",
+			"price": "400",
+			"count": "280",
+			"deal": "3",
+			"day": "1",
+			"date": "天天发团",
+			"traffic": "汽车去汽车回",
+			"server": "无购物无自费"
+		}
+	],
+	"listDali":[
+		{
+			"img": "../../../static/img/price/price2.jpg",
+			"title": "大理-丽江-泸沽湖9日玩法",
+			"jianjie": "大理->丽江->泸沽湖",
+			"price": "400",
+			"count": "280",
+			"deal": "3",
+			"day": "1",
+			"date": "天天发团",
+			"traffic": "汽车去汽车回",
+			"server": "无购物无自费"
+		}
+	]
+}

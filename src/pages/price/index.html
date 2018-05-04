@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>攻略</title>
+	<title>价格</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
-	<link rel="stylesheet" type="text/css" href="../../styles/travel_notes.css">
+	<link rel="stylesheet" type="text/css" href="../../styles/price.css">
 </head>
 <body>
-	<div id="travel_notes" class="travel_notes" style="margin: auto;">
+	<div id="price" class="price" style="margin: auto;">
 		<div class="navtop">
 			<div class="logo">
 				轻松旅游网
@@ -19,10 +19,12 @@
 							首页
 						</li>
 					</a>
+					<a href="../travel_notes/index.html" target="_blank">
+						<li>
+							攻略
+						</li>
+					</a>
 					
-					<li class="chosed">
-						攻略
-					</li>
 					<a href="../scenic_spot/index.html" target="_blank">
 						<li>
 							景点
@@ -33,20 +35,19 @@
 							线路
 						</li>
 					</a>
-					
-					<li>
-						游记
-					</li>
+					<a href="../travel_notes/index.html" target="_blank">
+						<li>
+							游记
+						</li>
+					</a>
 					<a href="../food/index.html" target="_blank">
 						<li>
 							美食
 						</li>
 					</a>
-					<a href="../price/index.html" target="_blank">
-						<li>
-							价格
-						</li>
-					</a>
+					<li class="chosed">
+						价格
+					</li>
 					<li>
 						旅行社
 					</li>
@@ -57,13 +58,13 @@
 		<div class="top">
 			<div class="survey">
 				<router-link to="/all" class="link">全部</router-link>
-				<router-link to="/gentuan" class="link">跟团游</router-link>
-				<router-link to="/ziyou" class="link">自由行</router-link>
-				<router-link to="/zijia" class="link">自驾游</router-link>
-				<router-link to="/guimi" class="link">闺蜜游</router-link>
-				<router-link to="/qinzi" class="link">亲子游</router-link>
-				<router-link to="/bama" class="link">爸妈游</router-link>
-				<router-link to="/miyue" class="link">蜜月游</router-link>
+				<router-link to="/lijiang" class="link">丽江</router-link>
+				<router-link to="/dali" class="link">大理</router-link>
+				<router-link to="/xishuangbanna" class="link">西双版纳</router-link>
+				<router-link to="/tengchong" class="link">腾冲</router-link>
+				<router-link to="/wenshan" class="link">文山</router-link>
+				<router-link to="/xianggelila" class="link">香格里拉</router-link>
+				<router-link to="/ruili" class="link">瑞丽</router-link>
 			</div>
 		</div>
 
@@ -123,53 +124,40 @@
 			//组件函数
 			var Component = function (name, listname) {
 				return component = Vue.component('part', {
-					template: '<div class="tem"></div>',
 					data: function(){
 						return{
-							message: name
+							message: name,
+							list:[]
 						}
 					},
+					template: '<div class="tem"><div class="main_item" v-for="item in list"><div class="main_item_box"><div class="main_item_box_top"><img class="notes_item" :src="item.img"><div class="main_item_box_content"><p class="title">{{item.title}}</p><p class="jianjie">{{item.jianjie}}</p></div><div class="main_item_box_right"><p style="line-height: 24px; height: 24px;">￥<span class="title">{{item.price}}</span>起</p><p>省{{item.count}}元</p><input @click="jump" class="detail" type="button" name="" value="查看路线详情"><p>最近成交{{item.deal}}笔</p></div></div></div><div class="main_item_box_bottom"><ul><li class="detail2"><p style="color: #999">行程天数</p><p>{{item.day}}天</p></li><li class="detail2"><p style="color: #999">出发日期</p><p>{{item.date}}</p></li><li class="detail2"><p style="color: #999">往返交通</p><p>{{item.traffic}}</p></li><li class="detail2"><p style="color: #999">品质服务</p><p>{{item.server}}</p></li></ul></div></div></div>',
 
 					methods:{
 						getData:function(){
+							var self = this
 							$.ajax({
-								url: '../../data/travel_notes/travel_notes.json',
+								url: '../../data/price/price.json',
 								type: 'get',
 								dataType: 'json',
 								data:{},
 								success:function(res){
-									var info = '';
-									if(listname !== 'all'){
-										for(var i = 0, len = res[listname].length; i<len; i++){
-											info += '<div class="main_item"><span class="'+
-											res[listname][i].icon+'"></span><img class="notes_item" src="'+
-											res[listname][i].img+'"><div class="main_item_right"><p class="title">'+
-											res[listname][i].title+'</p><p class="jianjie">'+
-											res[listname][i].jianjie+'</p><p class="date"><span class="ico1"> </span><span style="vertical-align: middle;">'+
-											res[listname][i].date+'</span> <span class="ico2"></span></p></div></div>'
-										}
+									if(listname !== "all"){
+										self.list = res[listname];
 									} else {
-										var list = [];
 										for(var item in res){
-											list = list.concat(res[item])
+											self.list = self.list.concat(res[item])
 										}
-										for(var i = 0, len = list.length; i<len; i++){
-											info += '<div class="main_item"><span class="'+
-											list[i].icon+'"></span><img class="notes_item" src="'+
-											list[i].img+'"><div class="main_item_right"><p class="title">'+
-											list[i].title+'</p><p class="jianjie">'+
-											list[i].jianjie+'</p><p class="date"><span class="ico1"> </span><span style="vertical-align: middle;">'+
-											list[i].date+'</span> <span class="ico2"></span></p></div></div>'
-										}
-
 									}
-									
-									$('.tem').append(info);
+
 								},
 								error: function(){
 									console.log('error')
 								}
 							})
+						},
+
+						jump: function(){
+							console.log(11)
 						}
 					},
 
@@ -181,42 +169,45 @@
 
 			// 全部
 			var all = new Component('全部', 'all');
-			// 跟团游
-			var gentuan = new Component('跟团游', 'listGentuan');
-			// 自由行
-			var ziyou = new Component('自由行', 'listZiyou')
-			// 自驾游
-			var zijia = new Component('自驾游', 'listZijia')
-			// 闺蜜游
-			var guimi = new Component('闺蜜游', 'listGuimi')
-			// 亲子游
-			var qinzi = new Component('亲子游', 'listQinzi')
-			// 爸妈游
-			var bama = new Component('爸妈游', 'listBama')
-			// 蜜月游
-			var miyue = new Component('蜜月游', 'listMiyue')
+			// 丽江
+			var lijiang = new Component('丽江', 'listLijiang');
+			// 大理
+			var dali = new Component('大理', 'listDali')
+			// 西双版纳
+			var xishuangbanna = new Component('西双版纳', 'listXishuangbanna')
+			// 腾冲
+			var tengchong = new Component('腾冲', 'listTengchong')
+			// 文山
+			var wenshan = new Component('文山', 'listWenshan')
+			// 香格里拉
+			var xianggelila = new Component('香格里拉', 'listXianggelila')
+			// 瑞丽
+			var ruili = new Component('瑞丽', 'listRuili')
 
 			var routes = [
 			{path: '/', component: all},
 			{path: '/all', component: all},
-			{path: '/gentuan', component: gentuan},
-			{path: '/ziyou', component: ziyou},
-			{path: '/zijia', component: zijia},
-			{path: '/guimi', component: guimi},
-			{path: '/qinzi', component: qinzi},
-			{path: '/bama', component: bama},
-			{path: '/miyue', component: miyue},
+			{path: '/lijiang', component: lijiang},
+			{path: '/dali', component: dali}
 			]
 			var router = new VueRouter({
 				routes
 			})
 			var app = new Vue({
-				el: '#travel_notes',
+				el: '#price',
 				data: {
-					message: 'Hello Vue!'
+					message: 'Hello Vue!',
 				},
-				router
+				router,
+				methods:{
+					jump:function(){
+						console.log(11)
+					}
+				},
 
+				created: function(){
+
+				}
 			})
 		})()
 		
