@@ -130,7 +130,7 @@
 							list:[]
 						}
 					},
-					template: '<div class="tem"><div class="main_item" v-for="item in list"><div class="main_item_box"><div class="main_item_box_top"><img class="notes_item" :src="item.img"><div class="main_item_box_content"><p class="title">{{item.title}}</p><p class="jianjie">{{item.jianjie}}</p></div><div class="main_item_box_right"><p style="line-height: 24px; height: 24px;">￥<span class="title">{{item.price}}</span>起</p><p>省{{item.count}}元</p><input @click="jump" class="detail" type="button" name="" value="查看路线详情"><p>最近成交{{item.deal}}笔</p></div></div></div><div class="main_item_box_bottom"><ul><li class="detail2"><p style="color: #999">行程天数</p><p>{{item.day}}天</p></li><li class="detail2"><p style="color: #999">出发日期</p><p>{{item.date}}</p></li><li class="detail2"><p style="color: #999">往返交通</p><p>{{item.traffic}}</p></li><li class="detail2"><p style="color: #999">品质服务</p><p>{{item.server}}</p></li></ul></div></div></div>',
+					template: '<div class="tem"><div class="main_item" v-for="item in list"><div class="main_item_box"><div class="main_item_box_top"><img class="notes_item" :src="item.img"><div class="main_item_box_content"><p class="title">{{item.title}}</p><p class="jianjie">{{item.jianjie}}</p></div><div class="main_item_box_right"><p style="line-height: 24px; height: 24px;">￥<span class="title">{{item.price}}</span>起</p><p>省{{item.count}}元</p><input @click="jump(item.goodsid)" class="detail" type="button" name="" value="查看路线详情"><p>最近成交{{item.deal}}笔</p></div></div></div><div class="main_item_box_bottom"><ul><li class="detail2"><p style="color: #999">行程天数</p><p>{{item.day}}天</p></li><li class="detail2"><p style="color: #999">出发日期</p><p>{{item.date}}</p></li><li class="detail2"><p style="color: #999">往返交通</p><p>{{item.traffic}}</p></li><li class="detail2"><p style="color: #999">品质服务</p><p>{{item.server}}</p></li></ul></div></div></div>',
 
 					methods:{
 						getData:function(){
@@ -156,8 +156,9 @@
 							})
 						},
 
-						jump: function(){
-							console.log(11)
+						jump: function(id){
+							var url = '../goods/index.html?goodsid=' + id;
+							window.open(url)
 						}
 					},
 

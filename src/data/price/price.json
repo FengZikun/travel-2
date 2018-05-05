@@ -10,7 +10,8 @@
 			"day": "1",
 			"date": "天天发团",
 			"traffic": "汽车去汽车回",
-			"server": "无购物无自费"
+			"server": "无购物无自费",
+			"goodsid": "1"
 		}
 	],
 	"listDali":[
@@ -24,7 +25,8 @@
 			"day": "1",
 			"date": "天天发团",
 			"traffic": "汽车去汽车回",
-			"server": "无购物无自费"
+			"server": "无购物无自费",
+			"goodsid": "2"
 		}
 	]
 }

@@ -14,6 +14,10 @@
 	margin: auto;
 }
 
+.main{
+	margin-bottom: 20px;
+}
+
 .navtop{
 	height: 89px;
 	background-color: #ffffff;
@@ -60,11 +64,13 @@
 	color: #ffffff;
 }
 
-.top{
-	min-height: 175px;
-	background-color: #fafafa;
+.item{
 	border-bottom: 1px solid #f4f4f4;
 
+}
+
+.item:hover{
+	background-color: #fafafa;
 }
 
 .survey{
@@ -75,6 +81,8 @@
 .h1{
 	height: 85.2px;
 	line-height: 85.2px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .main_item_left,
@@ -131,6 +139,11 @@
 	color: #00a7e1;
 }
 
+.title{
+	height: 25px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 25px;
+}
 .title_style{
 	display: inline-block;
 	width: 20px;
@@ -165,4 +178,128 @@ a:visited{
 .font{
 	margin-top: 20px;
     border: 1px solid #333;
+}
+
+.strategy{
+	display: flex;
+	justify-content: space-between;
+}
+
+.strategy_box:hover{
+	background: #fff;
+}
+
+.strategy_box img{
+	width: 310px;
+	height: 170px;
+}
+
+.strategy_box p{
+	width: 324px;
+	height: 18px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 18px;
+	color: #000;
+	margin: 15px 0;
+}
+
+.strategy_box span{
+	width: 310px;
+	height: 14px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 14px;
+	line-height: 14px;
+	color: #333;
+	display: block;
+	border-left: 2px solid #00a7e1;
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+.strategy_box div{
+	text-align: center;
+	padding-top: 20px;
+	border-top: 2px dashed #e4e4e4;
+	margin: 10px 0 20px 0;
+}
+
+.strategy_box div a{
+	height: 14px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 14px;
+	color: #00a7e1;
+	text-decoration: none;
+}
+
+.scenic_spot{
+	width: 1000px;
+	height: 423px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.scenic_spot_box{
+	width: 319px;
+	height: 200px;
+	position: relative;
+}
+
+.scenic_spot_box img{
+	width: 319px;
+	height: 200px;
+}
+
+.scenic_spot_box p{
+	height: 26px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 26px;
+	position: absolute;
+	bottom: 20px;
+	left: 18px;
+	color: #fff;
+}
+
+.line{
+	width: 1000px;
+	height: 372px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.line_box{
+	width: 490px;
+	height: 372px;
+	background-color: #ffffff;
+	border: solid 1px #e6e6e6;
+}
+
+.line_box p{
+	width: 490px;
+	height: 60px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 20px;
+	line-height: 60px;
+	color: #333;
+}
+
+.line_box img{
+	width: 490px;
+	height: 180px;
+}
+
+.line_box span{
+	display: inline-block;
+	width: 22px;
+	height: 31px;
+	background-image: url(../../static/ico/icon_xuhao.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	line-height: 24px;
+	color: #fff;
+	font-family: HiraginoSansGB-W6;
+	font-size: 18px;
+	text-align: center;
+	margin: 0 15px 0 21px;
 }
