@@ -15,7 +15,7 @@
 			"src": ""
 		},
 		{
-			"img":"static/img/travel_notes/price1.jpg",
+			"img":"static/img/travel_notes/gonglue.jpg",
 			"title": "丽江很贵？那是你不会玩！",
 			"span1": "不要只逛丽江古城",
 			"span2": "一、为何选择丽江-泸沽湖这条线?",
@@ -25,28 +25,173 @@
 
 	"scenic_spot":[
 		{
-			"img": "static/img/scenic_spot/price1.jpg",
+			"img": "static/img/scenic_spot/lijiang.jpg",
 			"name": "1 丽江"
 		},
 		{
-			"img": "static/img/scenic_spot/price1.jpg",
-			"name": "1 丽江"
+			"img": "static/img/scenic_spot/kunming.jpg",
+			"name": "2 昆明"
 		},
 		{
-			"img": "static/img/scenic_spot/price1.jpg",
-			"name": "1 丽江"
+			"img": "static/img/scenic_spot/dali.jpg",
+			"name": "3 大理"
 		},
 		{
-			"img": "static/img/scenic_spot/price1.jpg",
-			"name": "1 丽江"
+			"img": "static/img/scenic_spot/xishuangbanna.jpg",
+			"name": "4 西双版纳"
 		},
 		{
-			"img": "static/img/scenic_spot/price1.jpg",
-			"name": "1 丽江"
+			"img": "static/img/scenic_spot/xgll.jpg",
+			"name": "5 香格里拉"
 		},
 		{
-			"img": "static/img/scenic_spot/price1.jpg",
-			"name": "1 丽江"
+			"img": "static/img/scenic_spot/tengchong.jpg",
+			"name": "6 腾冲"
+		}
+	],
+
+	"line":[
+		{
+			"num": "1",
+			"img": "static/img/line/1525675005(1).jpg",
+			"title": "大理-丽江-泸沽湖9日玩法",
+			"content": "大理  →  丽江  →  泸沽湖",
+			"src": ""
+		},
+		{
+			"num": "2",
+			"img": "static/img/line/1525675077(1).jpg",
+			"title": "丽江-香格里拉3日玩法",
+			"content": "丽江 → 香格里拉",
+			"src": ""
+		}
+	],
+
+	"goods": [
+		{
+			"img": "static/img/price/price1.jpg",
+			"title": "丽江至香格里拉虎跳峡普达措秘境全景纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560"
+		},
+		{
+			"img": "static/img/price/price2.jpg",
+			"title": "丽江至香格里拉虎跳峡普达措秘境全景纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560"
+		},
+		{
+			"img": "static/img/price/erhai.jpg",
+			"title": "洱海纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560"
+		},
+		{
+			"img": "static/img/price/xianggelila.jpg",
+			"title": "香格里拉纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560"
+		}
+	],
+
+	"travel_notes": [
+		{
+			"icon": "meitu",
+			"img": "static/img/travel_notes/price1.jpg",
+			"title": "彩云之旅",
+			"jianjie": "这是我的第一篇游记，如果觉得我拍的片子还行，很荣幸能和同样热爱摄影的你们。。。这是我的第一篇游记，如果觉得我拍的片子还行，很荣幸能和同样热爱摄影的你们。。",
+			"date": "10天 2017-07-17"
+		},
+		{
+			"icon": "jinghua",
+			"img": "static/img/travel_notes/price2.jpg",
+			"title": "彩云之旅",
+			"jianjie": "这是我的第一篇游记，如果觉得我拍的片子还行，很荣幸能和同样热爱摄影的你们。。",
+			"date": "10天 2017-12-12"
+		}
+	],
+
+	"food": [
+		{
+			"img": "static/img/food/tudou.jpg",
+			"name": "土豆"
+		},
+		{
+			"img": "static/img/food/zhuerduo.jpg",
+			"name": "猪耳朵"
+		},
+		{
+			"img": "static/img/food/qiguoji.jpg",
+			"name": "汽锅鸡"
+		},
+		{
+			"img": "static/img/food/tianluo.jpg",
+			"name": "田螺"
+		}
+	],
+
+	"travel_agency": [
+		{
+			"img": "static/img/travel_agency/travel_agency1.jpg",
+			"name": "XX旅行社",
+			"dizhi": "云南省XXX市XXX区",
+			"qq": "888888888",
+			"dianhua": "400-XXX-XXXX"
+		},
+		{
+			"img": "static/img/travel_agency/travel_agency2.jpg",
+			"name": "XX旅行社",
+			"dizhi": "云南省XXX市XXX区",
+			"qq": "888888888",
+			"dianhua": "400-XXX-XXXX"
+		},
+		{
+			"img": "static/img/travel_agency/travel_agency3.jpg",
+			"name": "XX旅行社",
+			"dizhi": "云南省XXX市XXX区",
+			"qq": "888888888",
+			"dianhua": "400-XXX-XXXX"
+		}
+	],
+
+	"about": [
+		{
+			"title": "注意事项",
+			"item": [
+				"上海到云南大理旅游游记,大理旅游",
+				"乐动力推“两化”促全域旅游加速跑",
+				"西双版纳迎来一年一度泼水节",
+				"去西双版纳有哪些旅游景点，去西双版纳",
+				"今年开始安徽旅行社需交旅游质量保",
+				"云南丽江泸沽湖旅游景点，泸沽湖旅游",
+				"云南省旅发委携手百事特推进云南旅游",
+				"云南旅游揽金近五十亿，持比增长近五年",
+				"清明假期云南省旅游收入50.53亿"
+			]
+		},
+		{
+			"title": "必备物品",
+			"item": [
+				"上海到云南大理旅游游记,大理旅游",
+				"乐动力推“两化”促全域旅游加速跑",
+				"西双版纳迎来一年一度泼水节",
+				"去西双版纳有哪些旅游景点，去西双版纳",
+				"今年开始安徽旅行社需交旅游质量保",
+				"云南丽江泸沽湖旅游景点，泸沽湖旅游",
+				"云南省旅发委携手百事特推进云南旅游",
+				"云南旅游揽金近五十亿，持比增长近五年",
+				"清明假期云南省旅游收入50.53亿"
+			]
+		},
+		{
+			"title": "旅游新闻",
+			"item": [
+				"上海到云南大理旅游游记,大理旅游",
+				"乐动力推“两化”促全域旅游加速跑",
+				"西双版纳迎来一年一度泼水节",
+				"去西双版纳有哪些旅游景点，去西双版纳",
+				"今年开始安徽旅行社需交旅游质量保",
+				"云南丽江泸沽湖旅游景点，泸沽湖旅游",
+				"云南省旅发委携手百事特推进云南旅游",
+				"云南旅游揽金近五十亿，持比增长近五年",
+				"清明假期云南省旅游收入50.53亿"
+			]
 		}
 	]
 

@@ -1,0 +1,225 @@
+.top{
+	width: 1000px;
+	margin: 40px auto;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.top_left{
+	width: 440px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+}
+
+.top_right{
+	width: 512px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.top_left_img{
+	width: 440px;
+	height: 260px;
+}
+
+.title{
+	height: auto;
+	font-family: HiraginoSansGB-W3;
+	font-size: 22px;
+	color: #333;
+	line-height: 35px;
+}
+
+.label{
+	margin-top: 20px;
+}
+
+.label_item{
+	color: #00a7e1;
+	display: inline-block;
+	padding: 4px 7px;
+	border: 1px dashed #00a7e1;
+	font-family: HiraginoSansGB-W3;
+	font-size: 14px;
+	margin: 0 10px 10px 0;
+}
+
+.price{
+	width: 429px;
+	height: 69px;
+	background-color: #f9f9f9;
+	line-height: 69px;
+	color: #ff7000;
+	padding-left: 12px;
+}
+
+.phone{
+	width: 429px;
+	height: 69px;
+	background-color: #f9f9f9;
+	padding-left: 12px;
+	line-height: 69px;
+}
+
+.count{
+	vertical-align: bottom;
+	font-family: HiraginoSansGB-W6;
+	font-size: 34px;
+}
+
+.about_name{
+	font-family: HiraginoSansGB-W3;
+	font-size: 12px;
+	color: #999;
+	margin-right: 40px;
+}
+
+.type{
+	font-family: HiraginoSansGB-W3;
+	font-size: 12px;
+	color: #333;
+}
+
+.about_item{
+	margin: 5px 0;
+}
+
+.promise{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.icon{
+	display: inline-block;
+	width: 14px;
+	height: 17px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+
+.icon1{
+	background: url(../../../static/ico/icon_chanpin_renzhen.png);
+}
+
+.icon2{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url(../../../static/ico/icon_xianlu_dianhua.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 12px;
+}
+
+.phone_number{
+	display: inline-block;
+	font-family: HiraginoSansGB-W6;
+	font-size: 34px;
+	color: #333;
+	vertical-align: middle;
+}
+
+.main{
+	width: 1000px;
+	margin: auto;
+}
+
+.main_title{
+	font-family: HiraginoSansGB-W6;
+	font-size: 24px;
+	border-left: 5px solid #00a7e1;
+	padding-left: 20px;
+	margin-bottom: 30px;
+	margin-top: 40px;
+}
+
+.yuan{
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	background: #00a7e1;
+	vertical-align: middle;
+	margin-left: 25px;
+}
+
+.content_title{
+	font-family: HiraginoSansGB-W3;
+	font-size: 20px;
+	margin-left: 15px;
+	vertical-align: middle;
+	color: #333;
+}
+
+.content_text{
+	margin-bottom: 40px;
+	margin-left: 50px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 14px;
+	margin-top: 10px;
+	color: #333;
+}
+
+.content1_img{
+	width: 1000px;
+	margin: 15px 0 40px 0;
+}
+
+.content1_message{
+	width: 885px;
+	border-left: 2px solid #f5f5f5;
+	margin-left: 90px;
+	margin-top: 40px;
+}
+
+.content1_title{
+	margin-left: -30px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 20px;
+	color: #333;
+	margin-top: 25px;
+
+}
+
+.day{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background: #00a7e1;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 60px;
+	color: #fff;
+	font-family: HiraginoSansGB-W6;
+	font-size: 20px;
+	margin-right: 20px;
+}
+
+.content1_icon1{
+	background: url(../../../static/ico/icon_xianlu_chengshi.png);
+	margin-right: 35px;
+}
+
+.content1_icon2{
+	background: url(../../../static/ico/icon_xianlu_ccanyin.png);
+	margin-right: 35px;
+}
+
+.content1_icon3{
+	background: url(../../../static/ico/icon_xianlu_didian.png);
+	margin-right: 35px;
+}
+
+.arrive{
+	margin-top: 50px;
+	margin-left: -10px;
+}
+
+.content1_pic{
+	width: 410px;
+	display: inline-block;
+	margin-left: 15px;
+}

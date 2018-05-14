@@ -5,6 +5,7 @@
 	<title>线路</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="../../styles/line.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body>
 	<div id="line" class="line" style="margin: auto;">
@@ -137,6 +138,7 @@
 	<script type="text/javascript" src="../../../modules/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../../../modules/vue.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	<script type="text/javascript">
 		(function(){
 
@@ -149,7 +151,7 @@
 							list:[]
 						}
 					},
-					template: '<div class="tem"><div v-for="item in list" class="main_item"><div class="main_item_box"><div class="main_item_box_top"><div class="main_item_box_content"><p class="title">{{item.title}}<span style="vertical-align: middle;">最佳季节：{{item.season}}</span><span class="ico2"></span><span style="vertical-align: middle;">游玩时间：{{item.time}}</span><span class="ico1"></span></p><p class="jianjie">{{item.jianjie}}</p><input class="detail" type="button" name="" value="查看路线详情"></div><img class="notes_item" :src="item.map"></div><div class="main_item_right"></div></div></div></div>',
+					template: '<div class="tem"><div v-for="item in list" class="main_item"><div class="main_item_box"><div class="main_item_box_top"><div class="main_item_box_content"><p class="title">{{item.title}}<span style="vertical-align: middle;">最佳季节：{{item.season}}</span><span class="ico2"></span><span style="vertical-align: middle;">游玩时间：{{item.time}}</span><span class="ico1"></span></p><p class="jianjie">{{item.jianjie}}</p><input class="detail" type="button" name="" value="查看路线详情"></div><img class="notes_item" :src="item.map"></div><div class="main_item_right"><template><el-carousel :interval="4000" type="card" height="250px"><el-carousel-item v-for="(pitem, index) in item.photo" :key="index""><img class="photo" :src="pitem"></el-carousel-item></el-carousel></template></div></div></div></div>',
 
 					methods:{
 						getData:function(){

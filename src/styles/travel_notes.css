@@ -89,6 +89,7 @@ a{
 .main_item{
 	border-bottom: 1px solid #f4f4f4;
     padding: 20px 10px;
+    cursor: pointer;
 }
 
 .main_item:hover{

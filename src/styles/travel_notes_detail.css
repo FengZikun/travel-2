@@ -1,0 +1,107 @@
+.top{
+	height: 725px;
+}
+
+.topImg{
+	width: 100%;
+	height: 638px;
+}
+
+.topTitle{
+	height: 26px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 26px;
+	color: #fff;
+	text-align: center;
+	margin-top: -60px;
+}
+
+.main_top{
+	text-align: center;
+	height: 14px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 14px;
+	line-height: 14px;
+	margin-top: 45px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #eaeaea; 
+}
+
+.main_left{
+	width: 682px;
+	display: inline-block;
+}
+
+.main_right{
+	display: inline-block;
+	width: 240px;
+}
+
+.about{
+	display: flex;
+	flex-wrap: wrap;
+	width: 640px;
+	height: 98px;
+	border: solid 1px rgba(212, 212, 212, 0.5);
+	padding: 0 20px;
+	justify-content: space-between;
+}
+
+.about_item{
+	width: 190px;
+	height: 49px;
+	line-height: 49px;
+}
+
+.icon{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+}
+
+.icon1{
+	background: url(../../../static/ico/icon_shijian.png);
+}
+
+.icon2{
+	background: url(../../../static/ico/icon_tianshu.png);
+}
+
+.icon3{
+	background: url(../../../static/ico/icon_renwu.png);
+}
+
+.icon4{
+	background: url(../../../static/ico/icon_feiyong.png);
+}
+
+
+.about_item_content{
+	vertical-align: middle;
+	font-family: HiraginoSansGB-W3;
+	font-size: 14px;
+	line-height: 49px;
+}
+
+.content_img{
+	width: 671px;
+	height: 447px;
+}
+
+.content_title{
+	height: 24px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 24px;
+	margin: 50px 0 30px 0;
+}
+
+.paragraph{
+	width: 660px;
+	font-family: HiraginoSansGB-W3;
+	color: #333333;
+	line-height: 30px;
+	margin-bottom: 10px;
+}

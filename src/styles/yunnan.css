@@ -269,9 +269,10 @@ a:visited{
 
 .line_box{
 	width: 490px;
-	height: 372px;
+	height: 333px;
 	background-color: #ffffff;
 	border: solid 1px #e6e6e6;
+	cursor:pointer;
 }
 
 .line_box p{
@@ -302,4 +303,268 @@ a:visited{
 	font-size: 18px;
 	text-align: center;
 	margin: 0 15px 0 21px;
+}
+
+.title2{
+	height: 24px;
+	line-height: 24px;
+	font-size: 24px;
+	color: #00a7e1;
+	font-family: HiraginoSansGB-W6;
+}
+
+.goods{
+	width: 1000px;
+	height: 300px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.goods_box{
+	width: 238px;
+	height: 268px;
+	background-color: #ffffff;
+	border: solid 1px #eeeeee;
+}
+
+.goods_box img{
+	width: 238px;
+	height: 158px;
+}
+
+.goods_box p{
+	width: 223px;
+	height: 36px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 16px;
+	line-height: 18px;
+	margin: 18px 0 0 10px;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
+
+.travel_notes_box{
+	border-bottom: 1px solid #f4f4f4;
+    padding: 20px 10px;
+}
+
+.travel_notes_box:hover{
+	background: #fff;
+}
+
+.meitu,
+.jinghua,
+.shiyong,
+.diancang{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	position: absolute;
+}
+
+.meitu{
+	background-image: url(../../../static/ico/icon_meitu.png)
+}
+
+.jinghua{
+	background-image: url(../../../static/ico/icon_jinghua.png)
+}
+
+.shiyong{
+	background-image: url(../../../static/ico/icon_shiyong.png)
+}
+
+.diancang{
+	background-image: url(../../../static/ico/icon_diancang.png)
+}
+
+.notes_item{
+	width: 250px;
+	height: 185px;
+	margin-right: 10px;
+}
+
+.main_item_right{
+	width: 715px;
+	height: 185px;
+}
+
+.jianjie{
+	width: 600px;
+	height: 34px;
+	line-height: 17px;
+	font-size: 14px;
+	margin: 55px 0;
+}
+
+.date{
+	color: #bfb0b0;
+	font-size: 12px;
+}
+
+.ico1,
+.ico2{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background-size: contain;
+	vertical-align: middle;
+}
+
+.ico1{
+	background-image: url(../../../static/ico/icon_rili.png);
+}
+
+.ico2{
+	background-image: url(../../../static/ico/icon_fenlei.png);
+}
+
+.food_box img{
+	width: 237px;
+	height: 150px;
+}
+
+.food{
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.food_box p{
+	text-align: center;
+	height: 18px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 18px;
+	color: #333333;
+	margin: 10px 0;
+}
+
+.travel_agency_box{
+	width: 1000px;
+	height: 160px;
+	background: #fff;
+	padding-top: 1px;
+	margin-bottom: 10px;
+	border: solid 1px #e6e6e6;
+}
+
+.travel_agency_box_img{
+	width: 130px;
+    margin: 30px 0 0 106px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.travel_agency_box_img img{
+	width: 130px;
+	height: 72px;
+}
+
+.travel_agency_box_img p{
+	text-align: center;
+	height: 15px;
+	font-family: HiraginoSansGB-W3;
+	font-size: 16px;
+}
+
+.travel_agency_box_info{
+	display: inline-block;
+	width: 700px;
+	height: 160px;
+	vertical-align: top;
+	line-height: 160px;
+	text-align: center;
+}
+
+.travel_agency_box_info span{
+	vertical-align: middle;
+}
+
+.icon{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background-size: contain;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	margin-right: 15px;
+}
+.icon1{
+	background-image: url(../../../static/ico/icon_dizhi.png);
+}
+
+.icon2{
+	background-image: url(../../../static/ico/icon_dianhua.png);
+}
+
+.icon3{
+	background-image: url(../../../static/ico/icon_qq.png);
+}
+
+.info{
+	margin-right: 40px;
+}
+
+.h1 a{
+	text-decoration: none;
+}
+
+.about{
+	width: 1000px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.about_box{
+	width: 280px;
+}
+
+ul{
+	list-style: none;
+}
+
+.about_box_title{
+	background: #fafafa;
+	border-bottom: solid 1px #e6e6e6;
+	height: 18px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 18px;
+	padding: 10px 17px;
+	line-height: 18px;
+	position: relative;
+
+}
+
+.about_box ul{
+	border-top: solid 1px #e6e6e6;
+	border-left: solid 1px #e6e6e6;
+	border-right: solid 1px #e6e6e6;
+}
+
+.about_box_item{
+	border-bottom: solid 1px #e6e6e6;
+	height: 18px;
+	font-family: HiraginoSansGB-W6;
+	font-size: 16px;
+	padding: 10px 17px;
+	line-height: 18px;
+	color: #333;
+	background: #fff;
+	overflow: hidden;
+    
+}
+
+.about_box_item span{
+	display: -webkit-box;
+    width: 244px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.more{
+	position: absolute;
+	right: 15px;
 }

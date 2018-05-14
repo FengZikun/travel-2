@@ -5,6 +5,7 @@
 	<title>攻略</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="../../styles/travel_notes.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body>
 	<div id="travel_notes" class="travel_notes" style="margin: auto;">
@@ -117,64 +118,66 @@
 	<script type="text/javascript" src="../../../modules/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../../../modules/vue.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	<script type="text/javascript">
 		(function(){
 
 			//组件函数
 			var Component = function (name, listname) {
 				return component = Vue.component('part', {
-					template: '<div class="tem"></div>',
+					template: '<div class="tem"><div <div v-for="(item, index) in list" v-if="index<10" @click="jump(item.id)" class="main_item"><span :class="item.icon"></span><img class="notes_item" :src="item.img"><div class="main_item_right"><p class="title">{{item.title}}</p><p class="jianjie">{{item.jianjie}}</p><p class="date"><span class="ico1"> </span><span style="vertical-align: middle;">{{item.date}}</span> <span class="ico2"></span></p></div></div><el-pagination style="text-align: center;margin: 40px;" @current-change="getCurrentPage"  background  layout="prev, pager, next"  :total="total"></el-pagination></div>',
 					data: function(){
 						return{
-							message: name
+							message: name,
+							list: [],
+							total: null,
+							CurrentPage:1
 						}
 					},
 
 					methods:{
 						getData:function(){
+							var self = this;
 							$.ajax({
 								url: '../../data/travel_notes/travel_notes.json',
 								type: 'get',
 								dataType: 'json',
 								data:{},
 								success:function(res){
-									var info = '';
+									self.list = [];
 									if(listname !== 'all'){
-										for(var i = 0, len = res[listname].length; i<len; i++){
-											info += '<div class="main_item"><span class="'+
-											res[listname][i].icon+'"></span><img class="notes_item" src="'+
-											res[listname][i].img+'"><div class="main_item_right"><p class="title">'+
-											res[listname][i].title+'</p><p class="jianjie">'+
-											res[listname][i].jianjie+'</p><p class="date"><span class="ico1"> </span><span style="vertical-align: middle;">'+
-											res[listname][i].date+'</span> <span class="ico2"></span></p></div></div>'
-										}
+										self.list = res[listname];
+										self.total = self.list.length;
 									} else {
-										var list = [];
 										for(var item in res){
-											list = list.concat(res[item])
-										}
-										for(var i = 0, len = list.length; i<len; i++){
-											info += '<div class="main_item"><span class="'+
-											list[i].icon+'"></span><img class="notes_item" src="'+
-											list[i].img+'"><div class="main_item_right"><p class="title">'+
-											list[i].title+'</p><p class="jianjie">'+
-											list[i].jianjie+'</p><p class="date"><span class="ico1"> </span><span style="vertical-align: middle;">'+
-											list[i].date+'</span> <span class="ico2"></span></p></div></div>'
+											self.list = self.list.concat(res[item])
 										}
 
 									}
-									
-									$('.tem').append(info);
+									self.total = self.list.length;
+									var star = (self.CurrentPage - 1) * 10;
+									var end = self.list.length;
+									self.list = self.list.splice(star, end);
 								},
 								error: function(){
 									console.log('error')
 								}
 							})
+						},
+
+						getCurrentPage: function(val){
+							this.CurrentPage = val;
+							this.getData();
+						},
+
+						jump: function(id){
+							var url = 'detail.html?goodsid=' + id;
+							window.open(url)
 						}
 					},
 
 					created:function(){
-						this.getData();
+						this.getData(this.CurrentPage);
 					}
 				});
 			}

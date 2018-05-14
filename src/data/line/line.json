@@ -5,14 +5,30 @@
 			"season": "3-5月",
 			"time": "7-9天",
 			"jianjie": "大理->丽江->泸沽湖",
-			"map": "../../../static/img/spot_list/hahah.jpg"
+			"map": "../../../static/img/line/1525675005(1).jpg",
+			"photo": [
+				"../../../static/img/line/dali.jpg",
+				"../../../static/img/line/kunming.jpg",
+				"../../../static/img/line/lijiang.jpg",
+				"../../../static/img/line/xgll.jpg",
+				"../../../static/img/line/xishuangbanna.jpg",
+				"../../../static/img/line/price1.jpg"
+			]
 		},
 		{
 			"title": "丽江-香格里拉3日玩法",
 			"season": "3-4月",
 			"time": "5-6天",
 			"jianjie": "丽江->香格里拉",
-			"map": "../../../static/img/spot_list/hahah.jpg"
+			"map": "../../../static/img/line/1525675077(1).jpg",
+			"photo": [
+				"../../../static/img/line/dali.jpg",
+				"../../../static/img/line/kunming.jpg",
+				"../../../static/img/line/lijiang.jpg",
+				"../../../static/img/line/xgll.jpg",
+				"../../../static/img/line/xishuangbanna.jpg",
+				"../../../static/img/line/price1.jpg"
+			]
 		}
 	],
 	"listChengshi": [
@@ -21,14 +37,30 @@
 			"season": "3-5月",
 			"time": "7-9天",
 			"jianjie": "大理->丽江->泸沽湖",
-			"map": "../../../static/img/spot_list/hahah.jpg"
+			"map": "../../../static/img/line/1525675005(1).jpg",
+			"photo": [
+				"../../../static/img/line/dali.jpg",
+				"../../../static/img/line/kunming.jpg",
+				"../../../static/img/line/lijiang.jpg",
+				"../../../static/img/line/xgll.jpg",
+				"../../../static/img/line/xishuangbanna.jpg",
+				"../../../static/img/line/price1.jpg"
+			]
 		},
 		{
 			"title": "丽江-香格里拉3日玩法",
 			"season": "3-4月",
 			"time": "5-6天",
 			"jianjie": "丽江->香格里拉",
-			"map": "../../../static/img/spot_list/hahah.jpg"
+			"map": "../../../static/img/line/1525675077(1).jpg",
+			"photo": [
+				"../../../static/img/line/dali.jpg",
+				"../../../static/img/line/kunming.jpg",
+				"../../../static/img/line/lijiang.jpg",
+				"../../../static/img/line/xgll.jpg",
+				"../../../static/img/line/xishuangbanna.jpg",
+				"../../../static/img/line/price1.jpg"
+			]
 		}
 	]
 }

@@ -58,7 +58,7 @@
 			<div class="main">
 				<div class="h1">
 					<span class="title">自由行攻略</span>
-					<a href="">更多攻略</a>
+					<a href="">更多攻略></a>
 				</div>
 				<div class="strategy">
 					
@@ -71,7 +71,7 @@
 			<div class="main">
 				<div class="h1">
 					<span class="title">云南景点</span>
-					<a href="">更多景点</a>
+					<a href="">更多景点></a>
 				</div>
 				<div class="scenic_spot">
 					
@@ -84,16 +84,74 @@
 			<div class="main">
 				<div class="h1">
 					<span class="title">云南经典路线</span>
-					<a href="">更多路线</a>
+					<a href="">更多路线></a>
 				</div>
 				<div class="line">
-					<div class="line_box">
-						<p><span>1</span>大理-丽江-泸沽湖9日玩法</p>
-						<img src="">
-						<div>
-							
-						</div>
-					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- 云南跟团 -->
+		<div class="item">
+			<div class="main">
+				<div class="h1">
+					<span class="title">云南跟团</span>
+					<a href="">更多跟团></a>
+				</div>
+				<div class="goods">
+
+				</div>
+			</div>
+		</div>
+
+		<!-- 云南游记 -->
+		<div class="item">
+			<div class="main">
+				<div class="h1">
+					<span class="title">云南游记</span>
+					<a href="">更多游记></a>
+				</div>
+				<div class="travel_notes">
+
+				</div>
+			</div>
+		</div>
+
+		<!-- 云南美食 -->
+		<div class="item">
+			<div class="main">
+				<div class="h1">
+					<span class="title">云南美食</span>
+					<a href="">更多美食></a>
+				</div>
+				<div class="food">
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- 旅行社 -->
+		<div class="item">
+			<div class="main">
+				<div class="h1">
+					<span class="title">云南旅行社</span>
+					<a href="">更多旅行社></a>
+				</div>
+				<div class="travel_agency">
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- 云南相关事项 -->
+		<div class="item">
+			<div class="main">
+				<div class="h1">
+					<span class="title">云南相关事项</span>
+				</div>
+				<div class="about">
+					
 				</div>
 			</div>
 		</div>
@@ -173,6 +231,63 @@
 							scenic_spotInfo += '<div class="scenic_spot_box"><img src="'+ scenic_spot[i].img +'"><p>'+ scenic_spot[i].name +'</p></div>'
 						}
 						$('.scenic_spot').append(scenic_spotInfo)
+
+						//线路
+						var line = data.line;
+						var lineInfo = '';
+						for(var i = 0, len = line.length; i<len; i++){
+							lineInfo += '<div class="line_box"><p><span>'+ line[i].num +'</span>'+ line[i].title +'</p><img src="'+ line[i].img +'"><div><p style="height: 14px;font-size: 14px;line-height: 14px;margin: 20px;">'+ line[i].content +'</p><p style="width: auto;height: 14px;font-size: 14px;line-height: 14px;text-align: right;margin: 20px;"><a href="'+ line[i].src +'">查看></a></p></div></div>'
+						}
+						$('.line').append(lineInfo)
+
+						//跟团
+						var goods = data.goods;
+						var goodsInfo = '';
+						for(var i = 0, len = goods.length; i<len; i++){
+							goodsInfo += '<div class="goods_box"><img src="'+ goods[i].img +'"><p>'+ goods[i].title +'</p><p>￥<span class="title2">'+ goods[i].price +'</span>元</p></div>'
+						}
+						$('.goods').append(goodsInfo)
+
+						//游记
+						var travel_notes = data.travel_notes;
+						var travel_notesInfo = '';
+						for(var i = 0, len = travel_notes.length; i<len; i++){
+							travel_notesInfo += '<div class="travel_notes_box"><span class="'+
+											travel_notes[i].icon+'"></span><img class="notes_item" src="'+
+											travel_notes[i].img+'"><div class="main_item_right"><p class="title2">'+
+											travel_notes[i].title+'</p><p class="jianjie">'+
+											travel_notes[i].jianjie+'</p><p class="date"><span class="ico1"> </span><span style="vertical-align: middle;">'+
+											travel_notes[i].date+'</span> <span class="ico2"></span></p></div></div>'
+						}
+						$('.travel_notes').append(travel_notesInfo)
+
+						// 美食
+						var food = data.food;
+						var foodInfo = '';
+						for(var i = 0, len = food.length; i<len; i++){
+							foodInfo += '<div class="food_box"><img src="'+ food[i].img +'"><p>'+ food[i].name +'</p></div>'
+						}
+						$('.food').append(foodInfo)
+
+						//旅行社
+						var travel_agency = data.travel_agency;
+						var travel_agencyInfo = '';
+						for(var i = 0, len = travel_agency.length; i<len; i++){
+							travel_agencyInfo += '<div class="travel_agency_box"><div class="travel_agency_box_img"><img src="'+ travel_agency[i].img +'"><p>'+ travel_agency[i].name +'</p></div><div class="travel_agency_box_info"><span class="icon icon1"></span><span class="info">'+ travel_agency[i].dizhi +' </span><span class="icon icon2"></span><span class="info">'+ travel_agency[i].qq +'</span><span class="icon icon3"></span><span class="info">'+ travel_agency[i].dianhua +'</span></div></div>'
+						}
+						$('.travel_agency').append(travel_agencyInfo)
+
+						// 相关信息
+						var about = data.about;
+						var aboutInfo = '';
+						for(var i = 0, len = about.length; i<len; i++){
+							var item = '';
+							for(var j = 0, lenJ = about[i].item.length; j<lenJ; j++){
+								item += '<li class="about_box_item"><span>'+ about[i].item[j] +'</span></li>'
+							}
+							aboutInfo += '<div class="about_box"><ul><li class="about_box_title"><span>'+ about[i].title +'</span><span class="more">更多</span></li>'+ item +'</ul></div>'
+						}
+						$('.about').append(aboutInfo)
 					},
 					error: function(){
 						console.log('error')
