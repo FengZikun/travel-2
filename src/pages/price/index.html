@@ -5,6 +5,7 @@
 	<title>价格</title>
 	<link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
 	<link rel="stylesheet" type="text/css" href="../../styles/price.css">
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 <body>
 	<div id="price" class="price" style="margin: auto;">
@@ -118,6 +119,7 @@
 	<script type="text/javascript" src="../../../modules/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="../../../modules/vue.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
 	<script type="text/javascript">
 		(function(){
 
@@ -127,10 +129,12 @@
 					data: function(){
 						return{
 							message: name,
-							list:[]
+							list:[],
+							total: null,
+							CurrentPage:1
 						}
 					},
-					template: '<div class="tem"><div class="main_item" v-for="item in list"><div class="main_item_box"><div class="main_item_box_top"><img class="notes_item" :src="item.img"><div class="main_item_box_content"><p class="title">{{item.title}}</p><p class="jianjie">{{item.jianjie}}</p></div><div class="main_item_box_right"><p style="line-height: 24px; height: 24px;">￥<span class="title">{{item.price}}</span>起</p><p>省{{item.count}}元</p><input @click="jump(item.goodsid)" class="detail" type="button" name="" value="查看路线详情"><p>最近成交{{item.deal}}笔</p></div></div></div><div class="main_item_box_bottom"><ul><li class="detail2"><p style="color: #999">行程天数</p><p>{{item.day}}天</p></li><li class="detail2"><p style="color: #999">出发日期</p><p>{{item.date}}</p></li><li class="detail2"><p style="color: #999">往返交通</p><p>{{item.traffic}}</p></li><li class="detail2"><p style="color: #999">品质服务</p><p>{{item.server}}</p></li></ul></div></div></div>',
+					template: '<div class="tem"><div class="main_item" v-for="item in list"><div class="main_item_box"><div class="main_item_box_top"><img class="notes_item" :src="item.img"><div class="main_item_box_content"><p class="title">{{item.title}}</p><p class="jianjie">{{item.jianjie}}</p></div><div class="main_item_box_right"><p style="line-height: 24px; height: 24px;">￥<span class="title">{{item.price}}</span>起</p><p>省{{item.count}}元</p><input @click="jump(item.goodsid)" class="detail" type="button" name="" value="查看路线详情"><p>最近成交{{item.deal}}笔</p></div></div></div><div class="main_item_box_bottom"><ul><li class="detail2"><p style="color: #999">行程天数</p><p>{{item.day}}天</p></li><li class="detail2"><p style="color: #999">出发日期</p><p>{{item.date}}</p></li><li class="detail2"><p style="color: #999">往返交通</p><p>{{item.traffic}}</p></li><li class="detail2"><p style="color: #999">品质服务</p><p>{{item.server}}</p></li></ul></div></div><el-pagination style="text-align: center;margin: 40px;" @current-change="getCurrentPage"  background  layout="prev, pager, next"  :total="total"></el-pagination></div>',
 
 					methods:{
 						getData:function(){
@@ -143,17 +147,26 @@
 								success:function(res){
 									if(listname !== "all"){
 										self.list = res[listname];
+										self.total = self.list.length;
 									} else {
 										for(var item in res){
 											self.list = self.list.concat(res[item])
 										}
 									}
-
+									self.total = self.list.length;
+									var star = (self.CurrentPage - 1) * 10;
+									var end = self.list.length;
+									self.list = self.list.splice(star, end);
 								},
 								error: function(){
 									console.log('error')
 								}
 							})
+						},
+
+						getCurrentPage: function(val){
+							this.CurrentPage = val;
+							this.getData();
 						},
 
 						jump: function(id){
@@ -201,9 +214,7 @@
 				},
 				router,
 				methods:{
-					jump:function(){
-						console.log(11)
-					}
+					
 				},
 
 				created: function(){

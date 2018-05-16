@@ -66,30 +66,6 @@
 
 		<div class="main">
 			<router-view></router-view>
-			<!-- <div class="main_item">
-				<div class="main_item_box">
-					<div class="main_item_box_top">
-						<div class="main_item_box_content">
-							<p class="title">
-								大理-丽江-泸沽湖9日玩法
-								<span style="vertical-align: middle;">最佳季节：3-5月</span>
-								<span class="ico2"></span>
-								<span style="vertical-align: middle;">游玩时间：7-9天</span>
-								<span class="ico1"></span>
-							</p>
-							<p class="jianjie">
-								大理->丽江->泸沽湖
-							</p>
-							<input class="detail" type="button" name="" value="查看路线详情">
-						</div>
-						<img class="notes_item" src="">
-					</div>
-					
-					<div class="main_item_right">
-						
-					</div>
-				</div>
-			</div> -->
 		</div>
 
 		<div class="bottom">
@@ -148,10 +124,12 @@
 					data: function(){
 						return{
 							message: name,
-							list:[]
+							list:[],
+							total: null,
+							CurrentPage:1
 						}
 					},
-					template: '<div class="tem"><div v-for="item in list" class="main_item"><div class="main_item_box"><div class="main_item_box_top"><div class="main_item_box_content"><p class="title">{{item.title}}<span style="vertical-align: middle;">最佳季节：{{item.season}}</span><span class="ico2"></span><span style="vertical-align: middle;">游玩时间：{{item.time}}</span><span class="ico1"></span></p><p class="jianjie">{{item.jianjie}}</p><input class="detail" type="button" name="" value="查看路线详情"></div><img class="notes_item" :src="item.map"></div><div class="main_item_right"><template><el-carousel :interval="4000" type="card" height="250px"><el-carousel-item v-for="(pitem, index) in item.photo" :key="index""><img class="photo" :src="pitem"></el-carousel-item></el-carousel></template></div></div></div></div>',
+					template: '<div class="tem"><div v-for="(item, index) in list" v-if="index<10" class="main_item"><div class="main_item_box"><div class="main_item_box_top"><div class="main_item_box_content"><p class="title">{{item.title}}<span style="vertical-align: middle;">最佳季节：{{item.season}}</span><span class="ico2"></span><span style="vertical-align: middle;">游玩时间：{{item.time}}</span><span class="ico1"></span></p><p class="jianjie">{{item.jianjie}}</p><input class="detail" type="button" name="" value="查看路线详情" @click="jump(item.id)"></div><img class="notes_item" :src="item.map"></div><div class="main_item_right"><template><el-carousel :interval="4000" type="card" height="250px"><el-carousel-item v-for="(pitem, index) in item.photo" :key="index""><img class="photo" :src="pitem"></el-carousel-item></el-carousel></template></div></div></div><el-pagination style="text-align: center;margin: 40px;" @current-change="getCurrentPage"  background  layout="prev, pager, next"  :total="total"></el-pagination></div>',
 
 					methods:{
 						getData:function(){
@@ -164,16 +142,31 @@
 								success:function(res){
 									if(listname !== "all"){
 										self.list = res[listname];
+										self.total = self.list.length;
 									} else {
 										for(var item in res){
 											self.list = self.list.concat(res[item])
 										}
 									}
+									self.total = self.list.length;
+									var star = (self.CurrentPage - 1) * 10;
+									var end = self.list.length;
+									self.list = self.list.splice(star, end);
 								},
 								error: function(){
 									console.log('error')
 								}
 							})
+						},
+
+						getCurrentPage: function(val){
+							this.CurrentPage = val;
+							this.getData();
+						},
+
+						jump: function(id){
+							var url = 'detail.html?goodsid=' + id;
+							window.open(url)
 						}
 					},
 

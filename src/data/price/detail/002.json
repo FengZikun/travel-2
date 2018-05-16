@@ -1,12 +1,14 @@
 {
-	"name": "产品1",
+	"name": "大理",
 	"img": "../../../static/img/price/001/erhai.jpg",
-	"title": "【深度游】深圳出发7天轻奢半自助游双飞云南+石林或九乡+大理丽江",
+	"title": "大理",
 	"label": [
 		"敞篷吉普车环洱海",
 		"VIP私人游艇游",
 		"全程高档酒店",
-		"随机赠送版纳体验"
+		"随机赠送版纳体验",
+		"随机赠送版纳体验",
+		"大保健"
 	],
 	"price": "2780",
 	"type": "云南7天轻奢游",
@@ -57,64 +59,6 @@
 					"../../../static/img/price/001/erhai.jpg",
 					"../../../static/img/price/001/erhai.jpg"
 				]
-			}
-		],
-		"flight": [
-			{
-				"title": "航班信息",
-				"explain": "此航班仅供参考，对应的航班时间均为当地时间，低价折扣机票存在航班调整的可能（包括航空公司、航班号、起飞时间的变化等），故机票情况以最终电子客票为准。",
-				"text": [
-					{
-						"day": "第一天",
-						"start": "深圳",
-						"startAirport": "宝安机场",
-						"startTime": "11:25",
-						"end": "昆明",
-						"endAirport": "长水机场",
-						"endTime": "16:20",
-						"flight": "海南航空HU7163"
-					},
-					{
-						"day": "第5天",
-						"start": "昆明",
-						"startAirport": "长水机场",
-						"startTime": "11:25",
-						"end": "深圳",
-						"endAirport": "宝安机场",
-						"endTime": "16:20",
-						"flight": "海南航空HU7163"
-					}
-				]
-			},
-			{
-				"title": "交通信息",
-				"explain": "此航班仅供参考，对应的航班时间均为当地时间，低价折扣机票存在航班调整的可能（包括航空公司、航班号、起飞时间的变化等），故机票情况以最终电子客票为准。",
-				"text": [
-					{
-						"day": "第7天",
-						"start": "昆明",
-						"startAirport": "长水机场",
-						"startTime": "11:25",
-						"end": "深圳",
-						"endAirport": "宝安机场",
-						"endTime": "16:20",
-						"flight": "海南航空HU7163"
-					}
-				]
-			}
-		],
-		"hotelTitle": "酒店信息",
-		"hotelExplain": "以下酒店仅供参考，如遇出行高峰碰上酒店无空房情况，供应商会安排转至同级酒店。",
-		"hotelInfo": [
-			{
-				"img": "../../../static/img/price/001/erhai.jpg",
-				"name": "昆明锦泰大酒店",
-				"address": "昆明环城南路249号"
-			},
-			{
-				"img": "../../../static/img/price/001/erhai.jpg",
-				"name": "大理洱海龙湾假日酒店",
-				"address": "大理市下关镇滨海大道 ，与机场路"
 			}
 		]
 	},

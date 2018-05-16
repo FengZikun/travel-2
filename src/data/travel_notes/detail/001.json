@@ -30,5 +30,31 @@
 			],
 			"paragraph2": "游记到此翻篇，带着老妈去三亚旅行之度假篇【下】敬请期待哦~"
 		}
+	],
+	"goods": [
+		{
+			"img": "../../../static/img/price/price1.jpg",
+			"title": "丽江至香格里拉虎跳峡普达措秘境全景纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560",
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/price2.jpg",
+			"title": "丽江至香格里拉虎跳峡普达措秘境全景纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560",
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/erhai.jpg",
+			"title": "洱海纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560",
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/xianggelila.jpg",
+			"title": "香格里拉纯玩2日游1人次全景纯玩2日游1人次",
+			"price": "560",
+			"goodsid": "001"
+		}
 	]
 }

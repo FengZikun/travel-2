@@ -13,7 +13,8 @@
 				"../../../static/img/line/xgll.jpg",
 				"../../../static/img/line/xishuangbanna.jpg",
 				"../../../static/img/line/price1.jpg"
-			]
+			],
+			"id": "001"
 		},
 		{
 			"title": "丽江-香格里拉3日玩法",
@@ -28,7 +29,8 @@
 				"../../../static/img/line/xgll.jpg",
 				"../../../static/img/line/xishuangbanna.jpg",
 				"../../../static/img/line/price1.jpg"
-			]
+			],
+			"id": "001"
 		}
 	],
 	"listChengshi": [
@@ -45,7 +47,8 @@
 				"../../../static/img/line/xgll.jpg",
 				"../../../static/img/line/xishuangbanna.jpg",
 				"../../../static/img/line/price1.jpg"
-			]
+			],
+			"id": "001"
 		},
 		{
 			"title": "丽江-香格里拉3日玩法",
@@ -60,7 +63,8 @@
 				"../../../static/img/line/xgll.jpg",
 				"../../../static/img/line/xishuangbanna.jpg",
 				"../../../static/img/line/price1.jpg"
-			]
+			],
+			"id": "001"
 		}
 	]
 }

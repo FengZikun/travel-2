@@ -102,16 +102,13 @@
                 <span class="yuan"></span>
                 <span class="content_title">参考行程</span>
                 <div class="content1_message">
-                    <!-- <div class="content1_title">
-                        <div class="day">
-                            D<span></span>
-                        </div>
-                        <span></span>
-                    </div>
-                    <div>
-                        <span class="content1_icon1 icon"></span>
-                        <span></span>
-                    </div> -->
+                    
+                </div>
+                <div class="flight">
+                    
+                </div>
+                <div class="hotel">
+                    
                 </div>
             </div>
         </div>
@@ -258,6 +255,26 @@
                             content1Info += '<div class="content1_title"><div class="day">D<span>'+ (i+1) +'</span></div><span>'+ content[i].title1 +'</span></div>' + textInfo + '<div class="arrive"><span class="content1_icon1 icon"></span><span>'+ content[i].arrive +'</span></div><div class="arrive"><span class="content1_icon2 icon"></span><span>'+ content[i].eat +'</span></div><div class="arrive"><span class="content1_icon3 icon"></span><span></span></div><img src="">'+ imgInfo
                         }
                         $('.content1_message').append(content1Info)
+
+                        //航班，交通
+                        var flightInfo = '';
+                        var flight = res.content1.flight;
+                        for(var i = 0, len = flight.length; i<len; i++){
+                            var text = flight[i].text;
+                            var textInfo = ''
+                            for(var j = 0, jlen = text.length; j<jlen; j++){
+                                textInfo += '<div class="flight_message"><span class="flight_message_1">'+ text[j].day + ' ' + text[j].start + '-' + text[j].end +'</span><span class="flight_message_3">'+ text[j].startTime +'</span><span class="flight_message_4">'+ text[j].startAirport +'</span><span class="flight_message_5">'+ text[j].flight +'</span><span class="flight_message_6">'+ text[j].endTime +'</span><span class="flight_message_7">'+ text[j].endAirport +'</span></div>'
+                            }
+                            flightInfo += '<span class="yuan"></span><span class="content_title">'+ flight[i].title +'</span><p class="content_text" style="margin-bottom: 10px;">'+ flight[i].explain +'</p>'+ textInfo
+                        }
+                        $('.flight').append(flightInfo)
+
+                        //酒店
+                        var hotelInfo = '<span class="yuan"></span><span class="content_title">'+ res.content1.hotelTitle +'</span><p class="content_text">'+ res.content1.hotelExplain +'</p>';
+                        for(var i = 0, len = res.content1.hotelInfo.length; i<len; i++){
+                            hotelInfo += '<div class="hotel_message"><img class="hotel_img" src="'+ res.content1.hotelInfo[i].img +'"><div class="hotel_info"><p class="hotel_name">'+ res.content1.hotelInfo[i].name +'</p><p>地址：'+ res.content1.hotelInfo[i].address +'</p></div></div>'
+                        }
+                        $('.hotel').append(hotelInfo)
 
                         //content2
                         var content2Info = '';

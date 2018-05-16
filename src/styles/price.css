@@ -264,6 +264,7 @@ a:visited{
 	outline: none;
 	border: 0;
 	margin-bottom: 10px;
+	cursor: pointer;
 }
 
 .main_item_box_right{

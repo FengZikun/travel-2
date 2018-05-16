@@ -263,6 +263,8 @@ a:visited{
 	color: #fff;
 	outline: none;
 	border: 0;
+	cursor: pointer;
+	
 }
 
 .router-link-active{

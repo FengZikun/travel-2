@@ -26,7 +26,20 @@
 			"date": "天天发团",
 			"traffic": "汽车去汽车回",
 			"server": "无购物无自费",
-			"goodsid": "00"
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/price2.jpg",
+			"title": "大理",
+			"jianjie": "大理->丽江->泸沽湖",
+			"price": "1000",
+			"count": "280",
+			"deal": "3",
+			"day": "1",
+			"date": "天天发团",
+			"traffic": "汽车去汽车回",
+			"server": "无购物无自费",
+			"goodsid": "002"
 		}
 	]
 }
