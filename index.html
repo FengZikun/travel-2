@@ -209,8 +209,38 @@
 				this.getData();
 			},
 
+			eventBind: function(){
+				var self = this;
+				$('.strategyDetail').on('click', function(){
+					var id = $(this).attr('data-id');
+					self.jump(id, "travel_notes");
+				})
+				$('.scenic_spot_box').on('click', function(){
+					var id = $(this).attr('data-id');
+					self.jump(id, "scenic_spot");
+				})
+				$('.line_box').on('click', function(){
+					var id = $(this).attr('data-id');
+					self.jump(id, "line");
+				})
+				$('.goods_box').on('click', function(){
+					var id = $(this).attr('data-id');
+					self.jump(id, "price");
+				})
+				$('.travel_notes_box').on('click', function(){
+					var id = $(this).attr('data-id');
+					self.jump(id, "travel_notes");
+				})
+			},
+
+			jump: function(id, type){
+                var url = 'src/pages/'+ type +'/detail.html?goodsid=' + id;
+                window.open(url)
+            },
+
 			// 请求数据
 			getData: function(){
+				var self = this;
 				$.ajax({
 					url: 'src/data/home.json',
 					data:{},
@@ -222,7 +252,7 @@
 						var strategy = data.strategy;
 						var strategyInfo = ''
 						for(var i = 0, len = strategy.length; i<len; i++){
-							strategyInfo += '<div class="strategy_box"><img src="'+strategy[i].img+'"><p>'+ strategy[i].title +'</p><span>'+ strategy[i].span1 +'</span><span>'+ strategy[i].span2 +'</span><div><a href="'+ strategy[i].src +'">查看详情</a></div></div>'
+							strategyInfo += '<div class="strategy_box"><img src="'+strategy[i].img+'"><p>'+ strategy[i].title +'</p><span>'+ strategy[i].span1 +'</span><span>'+ strategy[i].span2 +'</span><div><a class="strategyDetail" href="javascript:void(0)" data-id="'+ strategy[i].goodsid +'">查看详情</a></div></div>'
 						}
 						$('.strategy').append(strategyInfo)
 
@@ -230,7 +260,7 @@
 						var scenic_spot = data.scenic_spot;
 						var scenic_spotInfo = '';
 						for(var i = 0, len = scenic_spot.length; i<len; i++){
-							scenic_spotInfo += '<div class="scenic_spot_box"><img src="'+ scenic_spot[i].img +'"><p>'+ scenic_spot[i].name +'</p></div>'
+							scenic_spotInfo += '<div class="scenic_spot_box" data-id="'+ scenic_spot[i].goodsid +'"><img src="'+ scenic_spot[i].img +'"><p>'+ scenic_spot[i].name +'</p></div>'
 						}
 						$('.scenic_spot').append(scenic_spotInfo)
 
@@ -238,7 +268,7 @@
 						var line = data.line;
 						var lineInfo = '';
 						for(var i = 0, len = line.length; i<len; i++){
-							lineInfo += '<div class="line_box"><p><span>'+ line[i].num +'</span>'+ line[i].title +'</p><img src="'+ line[i].img +'"><div><p style="height: 14px;font-size: 14px;line-height: 14px;margin: 20px;">'+ line[i].content +'</p><p style="width: auto;height: 14px;font-size: 14px;line-height: 14px;text-align: right;margin: 20px;"><a href="'+ line[i].src +'">查看></a></p></div></div>'
+							lineInfo += '<div class="line_box" data-id="'+ line[i].goodsid +'"><p><span>'+ line[i].num +'</span>'+ line[i].title +'</p><img src="'+ line[i].img +'"><div><p style="height: 14px;font-size: 14px;line-height: 14px;margin: 20px;">'+ line[i].content +'</p><p style="width: auto;height: 14px;font-size: 14px;line-height: 14px;text-align: right;margin: 20px;"><a href="javascript:void(0)">查看></a></p></div></div>'
 						}
 						$('.line').append(lineInfo)
 
@@ -246,7 +276,7 @@
 						var goods = data.goods;
 						var goodsInfo = '';
 						for(var i = 0, len = goods.length; i<len; i++){
-							goodsInfo += '<div class="goods_box"><img src="'+ goods[i].img +'"><p>'+ goods[i].title +'</p><p>￥<span class="title2">'+ goods[i].price +'</span>元</p></div>'
+							goodsInfo += '<div class="goods_box" data-id="'+ goods[i].goodsid +'"><img src="'+ goods[i].img +'"><p>'+ goods[i].title +'</p><p>￥<span class="title2">'+ goods[i].price +'</span>元</p></div>'
 						}
 						$('.goods').append(goodsInfo)
 
@@ -254,7 +284,8 @@
 						var travel_notes = data.travel_notes;
 						var travel_notesInfo = '';
 						for(var i = 0, len = travel_notes.length; i<len; i++){
-							travel_notesInfo += '<div class="travel_notes_box"><span class="'+
+							travel_notesInfo += '<div class="travel_notes_box" data-id="'+
+											travel_notes[i].goodsid+'"><span class="'+
 											travel_notes[i].icon+'"></span><img class="notes_item" src="'+
 											travel_notes[i].img+'"><div class="main_item_right"><p class="title2">'+
 											travel_notes[i].title+'</p><p class="jianjie">'+
@@ -290,6 +321,8 @@
 							aboutInfo += '<div class="about_box"><ul><li class="about_box_title"><span>'+ about[i].title +'</span><span class="more">更多</span></li>'+ item +'</ul></div>'
 						}
 						$('.about').append(aboutInfo)
+
+						self.eventBind();
 					},
 					error: function(){
 						console.log('error')

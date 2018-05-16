@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<title></title>
     <link rel="shortcut icon" type="image/x-icon" href="../../../static/32.ico" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../../styles/line.css">
-    <link rel="stylesheet" type="text/css" href="../../styles/line_detail.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/scenic_spot.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/scenic_spot_detail.css">
 </head>
 <body>
     <div class="navtop">
@@ -24,15 +24,14 @@
                         攻略
                     </li>
                 </a>
-
-                <a href="../scenic_spot/index.html" target="_blank">
+                <li class="chosed">
+                    景点
+                </li>
+                <a href="../line/index.html" target="_blank">
                     <li>
-                        景点
+                        攻略
                     </li>
                 </a>
-                <li class="chosed">
-                    线路
-                </li>
                 <a href="../travel_notes/index.html" target="_blank">
                     <li>
                         游记
@@ -55,51 +54,72 @@
         </div>
     </div>
     <div class="top">
-        <div class="top_header">
-            <div class="title">
+        <div class="title">
+            泸沽湖
+        </div>
+        <div>
+            <div class="main_item_mid">
+                <img class="img1" src="">
             </div>
-            <div class="season">
-                <span class="ico1 ico"></span>
-                最佳季节:
-                <span class="season_info"></span>
+            <div class="main_item_right">
+                <div class="main_item_right_item">
+                    <img class="img2" src="">
+                </div>
+                <div class="main_item_right_item">
+                    <img class="img3" src="">
+                </div>
             </div>
         </div>
-        <div class="top_footer">
-            <div class="top_footer_left">
-                <div style="font-size: 18px;color: #333;line-height: 24px;margin: 20px 0 10px 0;">
-                    路线概览
-                </div>
-                <div class="line" style="padding-bottom: 30px;border-bottom: 1px solid #eaeaea;"></div>
-                <div class="tips">
-                    <p style="margin: 10px 0;font-size: 18px;font-family: HiraginoSansGB-W3;">Tips</p>
-                </div>
-                <div class="summarize">
-                    <p style="margin: 10px 0;font-size: 18px;font-family: HiraginoSansGB-W3;">总结</p>
-                </div>
-            </div>
-            <img class="line_img" src="">
-        </div>
+        
     </div>
 
     <div class="main">
-        <div class="main_one">
-            <div class="content1">
-                <div class="content1_message">
+        <div class="main_title">
+            概况
+        </div>
+    </div>
 
-                </div>
-                <div class="flight">
+    <div class="main2">
+        <div class="main2_left">
+            <p>电话</p>
+            <p class="phone"></p>
+        </div>
+        <div class="main2_left">
+            <p>景点位置</p>
+            <p class="address"></p>
+        </div>
+        <div class="main2_left">
+            <p>用时参考</p>
+            <p class="time"></p>
+        </div>
+    </div>
 
-                </div>
-                <div class="hotel">
+    <div class="main3">
+        <p>交通</p>
+    </div>
 
-                </div>
-            </div>
+    <div class="main3">
+        <p>门票</p>
+    </div>
+
+    <div class="main3">
+        <p>开放时间</p>
+    </div>
+
+    <div class="other">
+        <div class="title">
+            其他热门景点
+        </div>
+        <div class="all">
+            <ul class="all_list">
+
+            </ul>
         </div>
     </div>
 
     <div class="other">
         <div class="title">
-            其他热门玩法
+            热门线路推荐
         </div>
         <div class="other_box">
 
@@ -168,69 +188,84 @@
 
             eventBind: function(){
                 var self = this;
-                $('.other_box_item').on('click', function(){
+                $('.all_spot').on('click', function(){
                     var id = $(this).attr('data-id');
                     self.jump(id)
                 })
             },
 
             jump: function(id){
-                var url = '../line/detail.html?goodsid=' + id;
+                var url = '../scenic_spot/detail.html?goodsid=' + id;
                 window.open(url)
             },
 
-            //获取产品信息
+            //获取景点信息
             getData: function(id){
                 var self = this;
-                var url = '../../data/line/detail/'+ id +'.json'
+                var url = '../../data/scenic_spot/detail/'+ id +'.json'
                 $.ajax({
                   url: url,
                   type: 'get',
                   dataType: 'json',
                   data:{},
                   success:function(res){
-                    $('title').html(res.name)
-                    $('.top_left_img').prop('src', res.img);
-                    $('.title').eq(0).text(res.title);
-                    $('.season_info').text(res.season);
-                    $('.line').text(res.line);
-                    $('.tips').append(res.tips);
-                    $('.summarize').append(res.summarize);
-                    $('.line_img').prop('src', res.img)
-                        //content1
-                        $('.content1_img').prop('src', res.content1.img);
-                        var content1Info = '';
-                        var content = res.content1.content;
-                        for(var i = 0, len = content.length; i<len; i++){
-                            var text = content[i].text;
-                            var text2 = content[i].tishi;
-                            var img = content[i].picture;
-                            var textInfo = ''
-                            var imgInfo = ''
-                            for(var j = 0, jlen = text.length; j<jlen; j++){
-                                textInfo += '<p class="content_text" style="margin-bottom: 10px;">'+ text[j] +'</p>'
-                            }
+                    $('title').text(res.name);
+                    $('.img1').prop('src', res.img1);
+                    $('.img2').prop('src', res.img2);
+                    $('.img3').prop('src', res.img3);
+                    $('.phone').text(res.phone);
+                    $('.address').text(res.address);
+                    $('.time').text(res.time);
+                    var textInfo = '';
+                    for(var i = 0,len = res.text.length; i<len; i++){
+                        textInfo += '<p class="content_text" style="margin-top: 0;">'+ res.text[i] +'</p>'
+                    }
+                    $('.main').append(textInfo)
 
-                            for(var y = 0, ylen = img.length; y<ylen; y++){
-                                imgInfo += '<img class="content1_pic" src="'+ img[y] +'">'
-                            }
-
-                            content1Info += '<div class="content1_title"><div class="day">D<span>'+ (i+1) +'</span></div><span>'+ content[i].title1 +'</span></div>' + textInfo + '<div class="arrive"><span class="content1_icon1 icon"></span><span>交通攻略</span></div><p class="content_text" style="margin-bottom: 10px;">'+ content[i].traffic +'</p><div class="arrive"><span class="content1_icon2 icon"></span><span>门票攻略</span></div><p class="content_text" style="margin-bottom: 10px;">'+ content[i].tickets +'</p><div class="arrive"><span class="content1_icon3 icon"></span>住宿攻略<span></span></div><p class="content_text" style="margin-bottom: 10px;">'+ content[i].live +'</p><img src="">'+ imgInfo
+                    var trafficInfo = ''
+                    for(var i = 0,len = res.traffic.length; i<len; i++){
+                        var typeInfo = '';
+                        var text = res.traffic[i].text;
+                        for(var j = 0, jlen = text.length; j<jlen; j++){
+                            typeInfo += '<p class="content_text" style="margin-top: 0;margin-bottom: 0;">' + (j+1) + '.' + text[j] +'</p>'
                         }
-                        $('.content1_message').append(content1Info)
+                        trafficInfo += '<p class="content_text" style="margin-top: 15px;margin-bottom: 5px;">'+ res.traffic[i].type +'</p>' + typeInfo
 
-                        //推荐线路
+                    }
+                    $('.main3').eq(0).append(trafficInfo);
+
+                    var ticketInfo = '';
+                    for(var i = 0,len = res.ticket.length; i<len; i++){
+                        ticketInfo += '<p class="content_text" style="margin-top: 0;margin-bottom: 0;">'+ res.ticket[i] +'</p>'
+                    }
+                    $('.main3').eq(1).append(ticketInfo);
+
+                    var openTimeInfo = '';
+                    for(var i = 0,len = res.openTime.length; i<len; i++){
+                        openTimeInfo += '<p class="content_text" style="margin-top: 0;margin-bottom: 0;">'+ res.openTime[i] +'</p>'
+                    }
+                    $('.main3').eq(2).append(openTimeInfo);
+
+                    var info = '';
+                    for(var i = 0, len = res.list.length; i<len; i++){
+                        info += '<li class="all_spot" data-id="'+ res.list[i].goodsid +'"><img class="spot_img" src="'
+                        +res.list[i].img+'"><div class="spot_item">'
+                        +res.list[i].name+'</div></li>'
+                    }
+                    $('.all_list').append(info)
+
+                    //推荐线路
                         var tuijainInfo = '';
-                        for(var i = 0, len = res.list.length; i<len; i++){
-                            tuijainInfo += '<div class="other_box_item" data-id="'+ res.list[i].goodsid +'"><img src="'+ res.list[i].img +'"><span>'+ res.list[i].title +'</span></div>'
+                        for(var i = 0, len = res.spotlist.length; i<len; i++){
+                            tuijainInfo += '<div class="other_box_item" data-id="'+ res.spotlist[i].goodsid +'"><img src="'+ res.spotlist[i].img +'"><span>'+ res.spotlist[i].title +'</span></div>'
                         }
                         $('.other_box').append(tuijainInfo);
-                        self.eventBind();
-                    },
-                    error: function(){
-                     console.log('error')
-                 }
-             })
+                    self.eventBind();
+                },
+                error: function(){
+                 console.log('error')
+             }
+         })
             }
         };
         goods.init();

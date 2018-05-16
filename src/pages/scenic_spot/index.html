@@ -132,6 +132,7 @@
 
 			// 请求列表数据
 			getData: function(){
+				var self = this;
 				$.ajax({
 					url: '../../data/scenic_spot/scenic_spot.json',
 					type: 'GET',
@@ -140,7 +141,7 @@
 					success: function(res){
 						var info = '';
 						for(var i = 0, len = res.list.length; i<len; i++){
-							info += '<div class="main_item"><div class="main_item_left"><p class="title"><span class="title_style">'
+							info += '<div class="main_item" data-id="'+ res.list[i].goodsid +'"><div class="main_item_left"><p class="title"><span class="title_style">'
 							+(i+1)+'</span> <span>'
 							+res.list[i].name+'</span></p><div class="content"><p>'
 							+res.list[i].introduce+'</p><p><span>这里还包括景点：</span><span class="spot">'
@@ -150,6 +151,7 @@
 							+res.list[i].img3+'"></div></div></div>'
 						}
 						$('.main_list').append(info)
+						self.eventBind();
 					},
 					error: function(){
 						console.log('error')
@@ -157,8 +159,27 @@
 				})
 			},
 
+			eventBind: function(){
+                var self = this;
+                $('.main_item').on('click', function(){
+                    var id = $(this).attr('data-id');
+                    self.jump(id)
+                })
+                
+                $('.all_spot').on('click', function(){
+                    var id = $(this).attr('data-id');
+                    self.jump(id)
+                })
+            },
+
+			jump: function(id){
+                var url = 'detail.html?goodsid=' + id;
+                window.open(url)
+            },
+
 			// 请求全部景点
 			getSpot: function(){
+				var self = this;
 				$.ajax({
 					url: '../../data/scenic_spot/spot_list.json',
 					type: 'GET',
@@ -167,11 +188,12 @@
 					success: function(res){
 						var info = '';
 						for(var i = 0, len = res.list.length; i<len; i++){
-							info += '<li class="all_spot"><img class="spot_img" src="'
+							info += '<li class="all_spot" data-id="'+ res.list[i].goodsid +'"><img class="spot_img" src="'
 							+res.list[i].img+'"><div class="spot_item">'
 							+res.list[i].name+'</div></li>'
 						}
 						$('.all_list').append(info)
+						self.eventBind();
 					},
 					error: function(){
 						console.log('error')

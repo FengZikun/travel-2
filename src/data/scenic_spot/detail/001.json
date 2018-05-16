@@ -1,0 +1,143 @@
+{
+	"name": "泸沽湖",
+	"img1": "../../../static/img/spot_list/hahah.jpg",
+	"img2": "../../../static/img/spot_list/hahah.jpg",
+	"img3": "../../../static/img/spot_list/hahah.jpg",
+	"text": [
+		"泸沽湖古称鲁窟海子，又名左所海，俗称亮海，位于四川省凉山彝族自治州盐源县与云南省丽江市宁蒗彝族自治县之间。",
+		"湖边的居民主要为摩梭人，也有部分纳西族人，摩梭人至今仍然保留着母系氏族婚姻制度。",
+		"独特的“阿夏”婚姻、自然而原始的民俗风情、美丽的自然风光，为这片古老的土地染上了神秘而美丽的色彩，被称为“神奇的东方女儿国”。"	
+	],
+	"phone": "0834-6390322;0834-6390302",
+	"address": "丽江市宁蒗彝族自治县永宁乡泸沽湖",
+	"time": "2-3天",
+	"traffic": [
+		{
+			"type": "客车",
+			"text": [
+				"在丽江客运站乘坐大巴客车，先到宁蒗县城，到县城后乘坐小面包车(约30元/人)可前往泸沽湖",
+				"在丽江客运站乘坐到永宁的大巴在大落水村下即可，票价50元。",
+				"丽江古城口玉河广场停车场每天早上有发往泸沽湖的旅游专线车，可抵达大洛水村和里格岛，往返车费160元/人，单程100元/人，早上8:00发车，车程3小时左右。",
+				"丽江高快客运站每天有两班车发往泸沽湖大洛水村，分别是8:00和8:30，车程3小时左右，车费约100元/人",
+				"丽江客运站每天有两班车发往泸沽湖大洛水村，分别是8:30和9:00，车程3小时，车费约106元/人"
+			]
+		},
+		{
+			"type": "出租车",
+			"text": [
+				"从丽江市区到泸沽湖可以自己租车，一般淡季为350-550元，旺季为550-800元"
+			]
+		}
+	],
+
+	"ticket": [
+		"在云南和四川两个公路入口分别设有售票处，门票均为100元/人",
+		"持学生证、60-69岁老年证、残疾证者50元/人；",
+		"持现役军人证、军残证、70岁以上老年证、国家新闻总署记者证免票。"
+	],
+
+	"openTime": [
+		"08:00-18:00"
+	],
+
+	"list": [
+		{
+			"name": "泸沽湖",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "丽江古城",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "玉龙雪山",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "大理古城",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "束河古镇",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "普达措国家公园",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "洱海",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "苍山",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "蓝月谷",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "石林国家地质公园",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "和顺古镇",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "双廊",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "梅里雪山",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "喜洲镇",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		},
+		{
+			"name": "泸沽湖",
+			"img": "../../../static/img/spot_list/hahah.jpg",
+			"goodsid": "001"
+		}
+	],
+
+	"spotlist":[
+		{
+			"img": "../../../static/img/price/001/erhai.jpg",
+			"title": "洱海三日玩法",
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/001/erhai.jpg",
+			"title": "洱海三日玩法",
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/001/erhai.jpg",
+			"title": "洱海三日玩法",
+			"goodsid": "001"
+		},
+		{
+			"img": "../../../static/img/price/001/erhai.jpg",
+			"title": "洱海三日玩法",
+			"goodsid": "001"
+		}
+	]
+}

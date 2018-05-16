@@ -243,6 +243,7 @@ a:visited{
 	width: 319px;
 	height: 200px;
 	position: relative;
+	cursor: pointer;
 }
 
 .scenic_spot_box img{
@@ -325,6 +326,7 @@ a:visited{
 	height: 268px;
 	background-color: #ffffff;
 	border: solid 1px #eeeeee;
+	cursor: pointer;
 }
 
 .goods_box img{
@@ -349,6 +351,7 @@ a:visited{
 .travel_notes_box{
 	border-bottom: 1px solid #f4f4f4;
     padding: 20px 10px;
+    cursor: pointer;
 }
 
 .travel_notes_box:hover{

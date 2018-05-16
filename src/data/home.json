@@ -5,48 +5,54 @@
 			"title": "丽江很贵？那是你不会玩！",
 			"span1": "不要只逛丽江古城",
 			"span2": "一、为何选择丽江-泸沽湖这条线?",
-			"src": ""
+			"goodsid": "001"
 		},
 		{
 			"img":"static/img/travel_notes/price2.jpg",
 			"title": "丽江很贵？那是你不会玩！",
 			"span1": "不要只逛丽江古城",
 			"span2": "一、为何选择丽江-泸沽湖这条线?",
-			"src": ""
+			"goodsid": "001"
 		},
 		{
 			"img":"static/img/travel_notes/gonglue.jpg",
 			"title": "丽江很贵？那是你不会玩！",
 			"span1": "不要只逛丽江古城",
 			"span2": "一、为何选择丽江-泸沽湖这条线?",
-			"src": ""
+			"goodsid": "001"
 		}
 	],
 
 	"scenic_spot":[
 		{
 			"img": "static/img/scenic_spot/lijiang.jpg",
-			"name": "1 丽江"
+			"name": "1 丽江",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/scenic_spot/kunming.jpg",
-			"name": "2 昆明"
+			"name": "2 昆明",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/scenic_spot/dali.jpg",
-			"name": "3 大理"
+			"name": "3 大理",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/scenic_spot/xishuangbanna.jpg",
-			"name": "4 西双版纳"
+			"name": "4 西双版纳",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/scenic_spot/xgll.jpg",
-			"name": "5 香格里拉"
+			"name": "5 香格里拉",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/scenic_spot/tengchong.jpg",
-			"name": "6 腾冲"
+			"name": "6 腾冲",
+			"goodsid": "001"
 		}
 	],
 
@@ -56,14 +62,14 @@
 			"img": "static/img/line/1525675005(1).jpg",
 			"title": "大理-丽江-泸沽湖9日玩法",
 			"content": "大理  →  丽江  →  泸沽湖",
-			"src": ""
+			"goodsid": "001"
 		},
 		{
 			"num": "2",
 			"img": "static/img/line/1525675077(1).jpg",
 			"title": "丽江-香格里拉3日玩法",
 			"content": "丽江 → 香格里拉",
-			"src": ""
+			"goodsid": "001"
 		}
 	],
 
@@ -71,22 +77,26 @@
 		{
 			"img": "static/img/price/price1.jpg",
 			"title": "丽江至香格里拉虎跳峡普达措秘境全景纯玩2日游1人次全景纯玩2日游1人次",
-			"price": "560"
+			"price": "560",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/price/price2.jpg",
 			"title": "丽江至香格里拉虎跳峡普达措秘境全景纯玩2日游1人次全景纯玩2日游1人次",
-			"price": "560"
+			"price": "560",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/price/erhai.jpg",
 			"title": "洱海纯玩2日游1人次全景纯玩2日游1人次",
-			"price": "560"
+			"price": "560",
+			"goodsid": "001"
 		},
 		{
 			"img": "static/img/price/xianggelila.jpg",
 			"title": "香格里拉纯玩2日游1人次全景纯玩2日游1人次",
-			"price": "560"
+			"price": "560",
+			"goodsid": "001"
 		}
 	],
 
@@ -96,14 +106,16 @@
 			"img": "static/img/travel_notes/price1.jpg",
 			"title": "彩云之旅",
 			"jianjie": "这是我的第一篇游记，如果觉得我拍的片子还行，很荣幸能和同样热爱摄影的你们。。。这是我的第一篇游记，如果觉得我拍的片子还行，很荣幸能和同样热爱摄影的你们。。",
-			"date": "10天 2017-07-17"
+			"date": "10天 2017-07-17",
+			"goodsid": "001"
 		},
 		{
 			"icon": "jinghua",
 			"img": "static/img/travel_notes/price2.jpg",
 			"title": "彩云之旅",
 			"jianjie": "这是我的第一篇游记，如果觉得我拍的片子还行，很荣幸能和同样热爱摄影的你们。。",
-			"date": "10天 2017-12-12"
+			"date": "10天 2017-12-12",
+			"goodsid": "001"
 		}
 	],
 
